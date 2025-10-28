@@ -14,7 +14,7 @@ export default function SidebarMobile({ open, setOpen }: SidebarProps) {
       {/* Sidebar */}
       {open && (
         <aside className={`fixed left-0 ${open ? 'h-full' : ''} w-full border-r bg-gray-900 border-gray-700 text-white z-60 sm:md:lg:hidden`}>
-          <div className="flex items-center justify-between p-4 border-b border-gray-700">
+          <div className="flex items-center justify-between px-4 pb-4 border-b border-gray-700">
             <h2 className="text-lg font-bold">Contents</h2>
             <button
               onClick={() => setOpen(false)}

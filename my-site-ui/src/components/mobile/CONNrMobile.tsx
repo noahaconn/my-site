@@ -52,7 +52,7 @@ export default function CONNrMobile({ open, setOpen }: CONNrProps) {
       {/* Sidebar */}
       {open && (
         <aside className={`fixed right-0 h-full w-full border-l bg-gray-900 border-gray-700 text-white z-50 sm:md:lg:hidden`}>
-          <div className="flex items-center p-4 border-b border-gray-700">
+          <div className="flex items-center px-4 pb-4 border-b border-gray-700">
             <button
               onClick={() => setOpen(false)}
               className="w-6 h-6"

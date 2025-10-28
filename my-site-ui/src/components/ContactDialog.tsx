@@ -33,7 +33,7 @@ export default function ContactDialog() {
       {/* Trigger */}
       <button
         onClick={() => setOpen(true)}
-        className="fixed rounded-lg right-13 sm:md:lg:right-3 mt-1 w-27 cursor-pointer bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 px-3 py-1"
+        className="fixed rounded-lg right-13 sm:md:lg:right-3 mt-1 h-8 w-27 cursor-pointer bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 px-3 py-1"
       >
         Contact Me
       </button>
