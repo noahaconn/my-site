@@ -5,16 +5,16 @@ type BioProps = {
 
 export default function Bio({ openSide, openConnr }: BioProps) {
   return (
-    <main className={`flex ${openSide ? "ml-64" : ""} ${openConnr ? "mr-90" : ""} min-h-screen w-screen flex-col items-center overflow-auto bg-gray-900 px-4`}>
-      <div className="max-w-4xl m-15 mt-25 text-left flex-row">
+    <main className={`flex ${openSide ? "ml-64" : ""} ${openConnr ? "mr-90" : ""} ${openConnr && !openSide ? "ml-10" : ""} min-h-screen w-screen flex-col items-center overflow-auto mx-auto px-4 bg-gray-900`}>
+      <div className="max-w-4xl mt-20 text-left flex-row">
         <div className="flex items-center">
-          <h1 className="flex text-4xl pr-3 font-bold text-white ">
+          <h1 className="flex text-4xl pr-3 w-51 font-bold text-white ">
             Noah Conn 
           </h1>
           <a
             href="/Noah_Conn_Resume.pdf"
             download
-            className="rounded-lg text-white bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 px-3 h-8 py-1"
+            className="rounded-lg text-white bg-gradient-to-r w-40 from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 px-3 h-auto py-1"
             >
             Download Resume
           </a>
@@ -27,7 +27,7 @@ export default function Bio({ openSide, openConnr }: BioProps) {
         <h2 className="text-white text-xl font-bold">
           Mission Statement
         </h2>
-        <p className="text-balance">
+        <p className="sm:md:lg:text-balance max-sm:text-justify">
           I believe part of my life mission is to use technology to improve the lives of individuals. I have a passion for using IT to solve educational, economic, and spiritual problems.
         </p>
       </div>
@@ -37,7 +37,7 @@ export default function Bio({ openSide, openConnr }: BioProps) {
         <h2 className="text-white text-xl font-bold">
           Professional Summary
         </h2>
-        <p className="text-balance">
+        <p className="sm:md:lg:text-balance max-sm:text-justify">
           Full-stack software engineer with industry experience building and maintaining web applications. Proficient in design and implementation of intuitive and responsive UIs. Experienced in REST API development. Strong teamwork, leadership, organization, and communication skills. Proven to learn quickly and adapt to diverse situations and complex challenges.
         </p>
       </div>

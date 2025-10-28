@@ -33,14 +33,14 @@ export default function ContactDialog() {
       {/* Trigger */}
       <button
         onClick={() => setOpen(true)}
-        className="rounded-lg cursor-pointer bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 px-3 py-1 mr-2"
+        className="fixed rounded-lg right-13 sm:md:lg:right-3 mt-1 w-27 cursor-pointer bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 px-3 py-1"
       >
         Contact Me
       </button>
 
       {/* Overlay */}
       {open && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-100">
           <div
             ref={dialogRef}
             className="bg-gray-900 rounded-xl p-6 shadow-xl w-80 text-center relative"

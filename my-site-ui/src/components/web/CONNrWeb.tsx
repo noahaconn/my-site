@@ -9,7 +9,7 @@ type CONNrProps = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function CONNr({ open, setOpen }: CONNrProps) {
+export default function CONNrWeb({ open, setOpen }: CONNrProps) {
   const [messages, setMessages] = useState<{ role: string; content: string }[]>([{role: "assistant", content: initMsg}]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -51,7 +51,7 @@ export default function CONNr({ open, setOpen }: CONNrProps) {
     <div>
       {/* Sidebar */}
       {open && (
-        <aside className={`fixed right-0 mt-15 h-full w-90 border-l bg-gray-900 border-gray-700 text-white z-40`}>
+        <aside className={`fixed right-0 mt-15 h-full w-90 border-l bg-gray-900 border-gray-700 text-white z-50 hidden sm:md:lg:block`}>
           <div className="flex items-center p-4 border-b border-gray-700">
             <button
               onClick={() => setOpen(false)}
@@ -83,7 +83,7 @@ export default function CONNr({ open, setOpen }: CONNrProps) {
 
             <form
               onSubmit={sendMessage}
-              className="px-3 flex gap-2 fixed bottom-0 py-2 w-90"
+              className="px-3 flex gap-2 fixed bottom-0 py-2 sm:md:lg:w-90"
             >
               <input
                 type="text"
@@ -95,9 +95,9 @@ export default function CONNr({ open, setOpen }: CONNrProps) {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 text-white px-3 py-2 rounded-3xl disabled:bg-gray-400"
+                className="bg-gradient-to-r cursor-pointer from-orange-400 via-orange-500 to-orange-600 text-white px-2 py-2 rounded-3xl disabled:bg-gray-400"
               >
-                <ArrowUpIcon className="w-4 cursor-pointer"></ArrowUpIcon>
+                <ArrowUpIcon className="w-6"></ArrowUpIcon>
               </button>
             </form>
           </div>
@@ -108,7 +108,7 @@ export default function CONNr({ open, setOpen }: CONNrProps) {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed top-15 right-1 p-2 w-13 h-13 mx-1 my-2 z-50 rounded text-white shadow cursor-pointer"
+          className="fixed top-15 p-2 w-12 h-12 mx-1 my-1 right-0 z-10 rounded text-white shadow cursor-pointer hidden sm:md:lg:block"
         >
           <SparklesIcon className="cursor-pointer bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 text-white rounded p-1"></SparklesIcon>
         </button>

@@ -1,22 +1,23 @@
 import { useState } from "react"
-import Sidebar from './components/Sidebar.tsx'
-import Home from "./components/Home.tsx";
+import SidebarWeb from './components/web/SidebarWeb.tsx'
+import Home from "./components/pages/Home.tsx";
 import Topbar from "./components/Topbar.tsx";
-import Bio from "./components/Bio.tsx";
+import Bio from "./components/pages/Bio.tsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CONNr from "./components/CONNr.tsx";
+import CONNrWeb from "./components/web/CONNrWeb.tsx";
 
 export default function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [connrOpen, setConnrOpen] = useState(false);
 
   return (
     <Router>
-      <div className="flex flex-col">
+      <div className="flex flex-col bg-gray-900">
         
-        <Topbar></Topbar>
+        <Topbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} connrOpen={connrOpen} setConnrOpen={setConnrOpen}></Topbar>
         <div className="flex flex-1">
-          <Sidebar open={sidebarOpen} setOpen={setSidebarOpen}></Sidebar>
+          
+          <SidebarWeb open={sidebarOpen} setOpen={setSidebarOpen}></SidebarWeb>
           
           {/* Main content */}
           <Routes>
@@ -24,7 +25,8 @@ export default function App() {
             <Route path="/bio" element={<Bio openSide={sidebarOpen} openConnr={connrOpen}/>} />
           </Routes>
 
-          <CONNr open={connrOpen} setOpen={setConnrOpen}></CONNr>
+          <CONNrWeb open={connrOpen} setOpen={setConnrOpen}></CONNrWeb>
+        
         </div>
       </div>
     </Router>
