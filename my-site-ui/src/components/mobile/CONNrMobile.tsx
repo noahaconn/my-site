@@ -64,8 +64,8 @@ export default function CONNrMobile({ open, setOpen }: CONNrProps) {
               <h3 className="text-gray-400 text-sm">Noah's AI Assistant</h3>
             </div>
           </div>
-          <div className="flex flex-col overflow-y-auto h-full [scrollbar-color:#4b5563_#111827] [scrollbar-width:thin] pb-50 max-w-2xl mx-auto bg-gray-900">
-            <div className="px-2 py-4 space-y-3">
+          <div className="flex flex-col items-center overflow-y-auto h-full [scrollbar-color:#4b5563_#111827] [scrollbar-width:thin] pb-50 mx-auto bg-gray-900">
+            <div className="px-2 py-4 space-y-3 max-w-2xl text-balance">
               {messages.map((m, i) => (
                 <div
                   key={i}
@@ -83,7 +83,7 @@ export default function CONNrMobile({ open, setOpen }: CONNrProps) {
 
             <form
               onSubmit={sendMessage}
-              className="px-3 flex gap-2 fixed bottom-0 py-2 sm:md:lg:w-90"
+              className="px-10 flex gap-2 fixed bottom-0 py-2 max-w-2xl w-screen sm:md:lg:w-90"
             >
               <input
                 type="text"
