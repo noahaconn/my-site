@@ -5,26 +5,26 @@ type BioProps = {
 
 export default function Bio({ openSide, openConnr }: BioProps) {
   return (
-    <main className={`flex ${openSide ? "ml-64" : ""} ${openConnr ? "mr-90" : ""} ${openConnr && !openSide ? "ml-10" : ""} min-h-screen w-screen flex-col items-center overflow-auto mx-auto px-4 bg-gray-900`}>
+    <main className={`flex ${openSide ? "ml-64" : ""} ${openConnr ? "mr-90" : ""} ${openConnr && !openSide ? "ml-10" : ""} min-h-screen w-screen flex-col items-center overflow-auto mx-auto px-4`}>
       <div className="max-w-4xl mt-20 text-left flex-row">
         <div className="flex items-center">
-          <h1 className="flex text-4xl pr-3 w-51 font-bold text-white ">
+          <h1 className="flex text-4xl pr-3 w-51 font-bold dark:text-white ">
             Noah Conn 
           </h1>
           <a
             href="/Noah_Conn_Resume.pdf"
             download
-            className="rounded-lg text-white bg-gradient-to-r w-40 from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 px-3 h-auto py-1"
+            className="rounded-lg text-white bg-gradient-to-r w-40 from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 shadow-sm px-3 h-auto py-1"
             >
             Download Resume
           </a>
         </div>
-        <h2 className="mb-8 text-gray-500">
+        <h2 className="mb-8 dark:text-gray-500">
           Software Engineer | Full-Stack Web Developer
         </h2>
 
-      <div className="text-gray-300 mb-10 text-md">
-        <h2 className="text-white text-xl font-bold">
+      <div className="dark:text-gray-300 mb-10 text-md">
+        <h2 className="dark:text-white text-xl font-bold">
           Mission Statement
         </h2>
         <p className="sm:md:lg:text-balance max-sm:text-justify">
@@ -33,8 +33,8 @@ export default function Bio({ openSide, openConnr }: BioProps) {
       </div>
 
       {/* PROFESSIONAL SUMMARY */}
-      <div className="text-gray-300 mb-10 text-md">
-        <h2 className="text-white text-xl font-bold">
+      <div className="dark:text-gray-300 mb-10 text-md">
+        <h2 className="dark:text-white text-xl font-bold">
           Professional Summary
         </h2>
         <p className="sm:md:lg:text-balance max-sm:text-justify">
@@ -43,8 +43,8 @@ export default function Bio({ openSide, openConnr }: BioProps) {
       </div>
 
       {/* SKILLS */}
-      <div className="text-gray-300 mb-10 text-md">
-        <h2 className="text-white text-xl font-bold">
+      <div className="dark:text-gray-300 mb-10 text-md">
+        <h2 className="dark:text-white text-xl font-bold">
           Skills
         </h2>
         <ul>
@@ -58,12 +58,12 @@ export default function Bio({ openSide, openConnr }: BioProps) {
       </div>
 
       {/* GALLERY */}
-      <div className="text-gray-300 mb-2 text-md">
-        <h2 className="text-white text-xl font-bold">
+      <div className="dark:text-gray-300 mb-2 text-md">
+        <h2 className="dark:text-white text-xl font-bold">
           Photo Gallery
         </h2>
       </div>
-      <div className="flex flex-wrap gap-2 justify-left">
+      <div className="flex flex-wrap gap-2 justify-left mb-10">
         <img src="/ISU.jpg" alt="Me at ISU" className="h-60 object-contain rounded-lg shadow"></img>
         <img src="/DomeoftheRock.jpg" alt="Me at Dome of the Rock" className="h-60 object-contain rounded-lg shadow"></img>
         <img src="/My_Woman.jpg" alt="Me and my fiancee, Mary" className="h-60 object-contain rounded-lg shadow"></img>   

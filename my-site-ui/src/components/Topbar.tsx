@@ -12,9 +12,9 @@ type TopbarProps = {
 
 export default function Topbar({ sidebarOpen, setSidebarOpen, connrOpen, setConnrOpen }: TopbarProps) {
   return (
-    <header className="fixed top-0 w-screen h-15 flex bg-gray-900 px-4 py-3 z-80 text-white border-b border-gray-700">
+    <header className="fixed top-0 w-screen h-15 flex px-4 py-3 z-80 bg-white dark:bg-gray-900 border-b border-gray-400 dark:border-gray-700 shadow-sm">
         <SidebarMobile open={sidebarOpen} setOpen={setSidebarOpen}></SidebarMobile>
-        <Link to="/" className="sm:md:lg:ml-0 mt-0 ml-9 text-3xl font-bold">CONNexus</Link>
+        <Link to="/" className="sm:md:lg:ml-0 mt-0 ml-9 text-3xl font-bold text-gray-800 dark:text-white hover:text-gray-500">CONNexus</Link>
         <ContactDialog></ContactDialog>
         <CONNrMobile open={connrOpen} setOpen={setConnrOpen}></CONNrMobile>
     </header>

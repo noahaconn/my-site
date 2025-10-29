@@ -51,34 +51,34 @@ export default function CONNrMobile({ open, setOpen }: CONNrProps) {
     <div>
       {/* Sidebar */}
       {open && (
-        <aside className={`fixed right-0 h-full w-full border-l bg-gray-900 border-gray-700 text-white z-50 sm:md:lg:hidden`}>
-          <div className="flex items-center px-4 pb-4 border-b border-gray-700">
+        <aside className={`fixed top-0 right-0 h-full w-full border-l bg-white pt-4 dark:bg-gray-900 border-gray-400 dark:border-gray-700 text-white z-50 sm:md:lg:hidden`}>
+          <div className="flex items-center px-4 pb-4 border-b border-gray-400 dark:border-gray-700">
             <button
               onClick={() => setOpen(false)}
               className="w-6 h-6"
             >
-              <ChevronRightIcon className="cursor-pointer"></ChevronRightIcon>
+              <ChevronRightIcon className="cursor-pointer text-gray-600 dark:text-white"></ChevronRightIcon>
             </button>
             <div className="ml-3">
               <h2 className="text-xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">CONNr</h2>
-              <h3 className="text-gray-400 text-sm">Noah's AI Assistant</h3>
+              <h3 className="text-gray-600 dark:text-gray-400 text-sm">Noah's AI Assistant</h3>
             </div>
           </div>
-          <div className="flex flex-col items-center overflow-y-auto h-full [scrollbar-color:#4b5563_#111827] [scrollbar-width:thin] pb-50 mx-auto bg-gray-900">
-            <div className="px-2 py-4 space-y-3 max-w-2xl text-balance">
+          <div className="flex flex-col items-center overflow-y-auto h-full [scrollbar-color:#4b5563_#111827] [scrollbar-width:thin] pb-50 mx-auto">
+            <div className="px-2 py-4 space-y-3 max-w-2xl text-black text-balance">
               {messages.map((m, i) => (
                 <div
                   key={i}
                   className={`p-3 rounded-xl ${
                     m.role === "user"
-                      ? "bg-gray-800 self-end justify-self-end text-right"
-                      : "text-gray-300 self-start text-left"
+                      ? "bg-gray-200  dark:text-white dark:bg-gray-800 self-end justify-self-end text-right"
+                      : "dark:text-gray-300 self-start text-left"
                   }`}
                 >
                   {m.content}
                 </div>
               ))}
-              {loading && <div className="px-2 text-gray-400">Thinking...</div>}
+              {loading && <div className="px-2 text-gray-600 dark:text-gray-400">Thinking...</div>}
             </div>
 
             <form
@@ -90,7 +90,7 @@ export default function CONNrMobile({ open, setOpen }: CONNrProps) {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask about Noah Conn..."
-                className="flex-1 bg-gray-800 rounded-3xl px-4 py-2 focus:outline-none "
+                className="flex-1 text-black bg-gray-200 dark:text-white dark:bg-gray-800 rounded-3xl px-4 py-2 focus:outline-none "
               />
               <button
                 type="submit"
@@ -108,7 +108,7 @@ export default function CONNrMobile({ open, setOpen }: CONNrProps) {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed top-1 p-2 w-12 h-12 mx-1 ml-0 my-1 right-0 z-40 rounded text-white shadow cursor-pointer sm:md:lg:hidden"
+          className="fixed top-1 p-2 w-12 h-12 mx-1 ml-0 my-1 right-0 z-40 rounded text-white cursor-pointer sm:md:lg:hidden"
         >
           <SparklesIcon className="cursor-pointer bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 text-white rounded p-1"></SparklesIcon>
         </button>

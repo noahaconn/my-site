@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <Router>
-      <div className="flex flex-col bg-gray-900">
+      <div className="flex flex-col bg-white dark:bg-gray-900">
         
         <Topbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} connrOpen={connrOpen} setConnrOpen={setConnrOpen}></Topbar>
         <div className="flex flex-1">

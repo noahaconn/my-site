@@ -13,21 +13,21 @@ export default function SidebarWeb({ open, setOpen }: SidebarProps) {
     <div>
       {/* Sidebar */}
       {open && (
-        <aside className={`fixed left-0 sm:md:lg:top-15 ${open ? 'h-full' : ''} w-full sm:md:lg:w-64 border-r bg-gray-900 border-gray-700 text-white z-60 hidden sm:md:lg:block`}>
-          <div className="flex items-center justify-between p-4 border-b border-gray-700">
+        <aside className={`fixed left-0 pt-15 ${open ? 'h-full' : ''} w-64 border-r bg-white dark:bg-gray-900 border-gray-400 text-gray-700 dark:border-gray-700 dark:text-white z-60 hidden shadow-lg sm:md:lg:block`}>
+          <div className="flex items-center justify-between p-4 border-b border-gray-400 dark:border-gray-700">
             <h2 className="text-lg font-bold">Contents</h2>
             <button
               onClick={() => setOpen(false)}
               className="w-6 h-6"
             >
-              <ChevronLeftIcon className="cursor-pointer"></ChevronLeftIcon>
+              <ChevronLeftIcon className="cursor-pointer text-gray-600 dark:text-white"></ChevronLeftIcon>
             </button>
           </div>
           <nav className="p-4 space-y-2">
-            <Link to="/" className="block rounded px-2 py-1 hover:bg-gray-800">
+            <Link to="/" className="block rounded px-2 py-1 hover:bg-gray-200 dark:hover:bg-gray-800">
               Home
             </Link>
-            <Link to="/bio" className="block rounded px-2 py-1 hover:bg-gray-800">
+            <Link to="/bio" className="block rounded px-2 py-1 hover:bg-gray-200 dark:hover:bg-gray-800">
               Bio
             </Link>
             <Link to="#" className="block rounded px-2 py-1">
@@ -41,7 +41,7 @@ export default function SidebarWeb({ open, setOpen }: SidebarProps) {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed sm:md:lg:top-15 top-1 p-2 w-12 h-12 mx-1 my-1 z-10 rounded text-white cursor-pointer shadow hidden sm:md:lg:block"
+          className="fixed top-15 w-8 h-8 m-3 z-10 text-gray-90 hover:text-gray-500 dark:text-white cursor-pointer hidden sm:md:lg:block"
         >
           <Bars3Icon></Bars3Icon>
         </button>

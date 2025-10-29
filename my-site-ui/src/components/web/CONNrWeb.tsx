@@ -51,34 +51,34 @@ export default function CONNrWeb({ open, setOpen }: CONNrProps) {
     <div>
       {/* Sidebar */}
       {open && (
-        <aside className={`fixed right-0 mt-15 h-full w-90 border-l bg-gray-900 border-gray-700 text-white z-50 hidden sm:md:lg:block`}>
-          <div className="flex items-center p-4 border-b border-gray-700">
+        <aside className={`fixed right-0 pt-15 h-full w-90 border-l bg-white dark:bg-gray-900 border-gray-400 dark:border-gray-700 text-white shadow-lg shadow-amber-400 z-50 hidden sm:md:lg:block`}>
+          <div className="flex items-center p-4 border-b border-gray-400 dark:border-gray-700">
             <button
               onClick={() => setOpen(false)}
               className="w-6 h-6"
             >
-              <ChevronRightIcon className="cursor-pointer"></ChevronRightIcon>
+              <ChevronRightIcon className="cursor-pointer text-gray-600 dark:text-white"></ChevronRightIcon>
             </button>
             <div className="ml-3">
               <h2 className="text-xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">CONNr</h2>
-              <h3 className="text-gray-400 text-sm">Noah's AI Assistant</h3>
+              <h3 className="text-gray-600 dark:text-gray-400 text-sm">Noah's AI Assistant</h3>
             </div>
           </div>
-          <div className="flex flex-col overflow-y-auto h-full [scrollbar-color:#4b5563_#111827] [scrollbar-width:thin] pb-50 max-w-2xl mx-auto bg-gray-900">
-            <div className="px-2 py-4 space-y-3">
+          <div className="flex flex-col overflow-y-auto h-full [scrollbar-color:#4b5563_#111827] [scrollbar-width:thin] pb-50 max-w-2xl mx-auto">
+            <div className="px-2 py-4 space-y-3 text-black">
               {messages.map((m, i) => (
                 <div
                   key={i}
                   className={`p-3 rounded-xl ${
                     m.role === "user"
-                      ? "bg-gray-800 self-end justify-self-end text-right"
-                      : "text-gray-300 self-start text-left"
+                      ? "bg-gray-200  dark:text-white dark:bg-gray-800 self-end justify-self-end text-right"
+                      : "dark:text-gray-300 self-start text-left"
                   }`}
                 >
                   {m.content}
                 </div>
               ))}
-              {loading && <div className="px-2 text-gray-400">Thinking...</div>}
+              {loading && <div className="px-2 text-gray-600 dark:text-gray-400">Thinking...</div>}
             </div>
 
             <form
@@ -90,12 +90,12 @@ export default function CONNrWeb({ open, setOpen }: CONNrProps) {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask about Noah Conn..."
-                className="flex-1 bg-gray-800 rounded-3xl px-4 py-2 focus:outline-none "
+                className="flex-1 text-black bg-gray-200 dark:text-white dark:bg-gray-800 rounded-3xl px-4 py-2 shadow-2xl focus:outline-none "
               />
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-gradient-to-r cursor-pointer from-orange-400 via-orange-500 to-orange-600 text-white px-2 py-2 rounded-3xl disabled:bg-gray-400"
+                className="bg-gradient-to-r cursor-pointer shadow-xl from-orange-400 via-orange-500 to-orange-600 text-white px-2 py-2 rounded-3xl disabled:bg-gray-400"
               >
                 <ArrowUpIcon className="w-6"></ArrowUpIcon>
               </button>
@@ -108,7 +108,7 @@ export default function CONNrWeb({ open, setOpen }: CONNrProps) {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed top-15 p-2 w-12 h-12 mx-1 my-1 right-0 z-10 rounded text-white shadow cursor-pointer hidden sm:md:lg:block"
+          className="fixed top-15 w-8 h-8 m-3 right-0 z-10 text-white shadow-sm cursor-pointer hidden sm:md:lg:block"
         >
           <SparklesIcon className="cursor-pointer bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 hover:from-orange-400 hover:via-orange-500 hover:to-orange-600 text-white rounded p-1"></SparklesIcon>
         </button>
