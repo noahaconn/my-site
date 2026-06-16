@@ -30,6 +30,9 @@ export default function SidebarMobile({ open, setOpen }: SidebarProps) {
             <Link to="/bio" onClick={() => setOpen(false)} className="block rounded px-2 py-1">
               Bio
             </Link>
+            <Link to="/bom-quiz" onClick={() => setOpen(false)} className="block rounded px-2 py-1">
+              BoM Quiz
+            </Link>
             <Link to="#" className="block rounded px-2 py-1">
               More Coming Soon...
             </Link>

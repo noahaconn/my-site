@@ -7,7 +7,7 @@ export default function ContactDialog() {
   const dialogRef = useRef<HTMLDivElement>(null);
 
   const phone = "+1 (309) 660-4623";
-  const email = "noahconn2020@gmail.org";
+  const email = "noahconn2020@gmail.com";
 	const linkedIn = "https://www.linkedin.com/in/noah-conn-b943a8204/";
 
 	useEffect(() => {

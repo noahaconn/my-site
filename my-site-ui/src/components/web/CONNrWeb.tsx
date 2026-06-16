@@ -1,6 +1,6 @@
 import { ArrowUpIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 import { SparklesIcon } from "@heroicons/react/16/solid";
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const initMsg = "Hi, I'm CONNr, Noah's AI Assistant. I can answer your questions about Noah. I have access to a lot more information than can be included on the site, so ask me anything!";
 
@@ -9,12 +9,30 @@ type CONNrProps = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+
 export default function CONNrWeb({ open, setOpen }: CONNrProps) {
   const [messages, setMessages] = useState<{ role: string; content: string }[]>([{role: "assistant", content: initMsg}]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
   const API_URL = 'https://r3uao1cq2a.execute-api.us-east-2.amazonaws.com/chat';
+
+  const warmedUp = useRef(false);
+
+  async function warmup() {
+    if (warmedUp.current) return;
+    warmedUp.current = true;
+
+    await fetch(API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ warmup: true }),
+    });
+  }
+
+  useEffect(() => {
+    warmup();
+  }, [open]);
 
   async function sendMessage(e: React.FormEvent) {
     e.preventDefault();
