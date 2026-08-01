@@ -14,6 +14,29 @@ type QuizItem = {
   text: string;
 };
 
+type ParsedReference = {
+  book: string;
+  chapter: string | null;
+  verse: string | null;
+};
+
+type PartScore = {
+  correct: number;
+  total: number;
+};
+
+type ScoreState = {
+  book: PartScore;
+  chapter: PartScore;
+  verse: PartScore;
+};
+
+const EMPTY_SCORE: ScoreState = {
+  book: { correct: 0, total: 0 },
+  chapter: { correct: 0, total: 0 },
+  verse: { correct: 0, total: 0 },
+};
+
 export default function BoMQuiz({
   openSide,
   openConnr,
@@ -22,8 +45,7 @@ export default function BoMQuiz({
   const [current, setCurrent] = useState<QuizItem | null>(null);
   const [guess, setGuess] = useState("");
   const [result, setResult] = useState("");
-  const [correct, setCorrect] = useState(0);
-  const [total, setTotal] = useState(0);
+  const [score, setScore] = useState<ScoreState>(EMPTY_SCORE);
 
   useEffect(() => {
     const combined: QuizItem[] = [
@@ -52,6 +74,25 @@ export default function BoMQuiz({
     return text.trim().toLowerCase().replace(/\s+/g, " ");
   }
 
+  // Splits a reference like "1 Nephi 3:7" into book/chapter/verse.
+  // References that are only book headings ("Alma") or chapter
+  // headings ("Alma 32") will simply have null chapter and/or verse.
+  function parseReference(ref: string): ParsedReference {
+    const match = ref
+      .trim()
+      .match(/^(.+?)\s+(\d+)(?:\s*:\s*(\d+(?:[-–]\d+)?))?$/);
+
+    if (match) {
+      return {
+        book: match[1],
+        chapter: match[2],
+        verse: match[3] ?? null,
+      };
+    }
+
+    return { book: ref.trim(), chapter: null, verse: null };
+  }
+
   function nextQuestion() {
     if (items.length === 0) return;
 
@@ -66,22 +107,59 @@ export default function BoMQuiz({
   function submitGuess() {
     if (!current) return;
 
-    const isCorrect =
-      normalize(guess) === normalize(current.reference);
+    const answer = parseReference(current.reference);
+    const attempt = parseReference(guess);
 
-    setTotal((t) => t + 1);
+    const bookCorrect =
+      normalize(attempt.book) === normalize(answer.book);
 
-    if (isCorrect) {
-      setCorrect((c) => c + 1);
-    }
+    const chapterCorrect =
+      answer.chapter !== null &&
+      attempt.chapter !== null &&
+      normalize(attempt.chapter) === normalize(answer.chapter);
 
-    setResult(
-      `${isCorrect ? "✓ Correct" : "✗ Incorrect"}
+    const verseCorrect =
+      answer.verse !== null &&
+      attempt.verse !== null &&
+      normalize(attempt.verse) === normalize(answer.verse);
 
-Answer: ${current.reference}
+    setScore((prev) => ({
+      book: {
+        correct: prev.book.correct + (bookCorrect ? 1 : 0),
+        total: prev.book.total + 1,
+      },
+      chapter:
+        answer.chapter !== null
+          ? {
+              correct:
+                prev.chapter.correct + (chapterCorrect ? 1 : 0),
+              total: prev.chapter.total + 1,
+            }
+          : prev.chapter,
+      verse:
+        answer.verse !== null
+          ? {
+              correct: prev.verse.correct + (verseCorrect ? 1 : 0),
+              total: prev.verse.total + 1,
+            }
+          : prev.verse,
+    }));
 
-${current.text}`
-    );
+    const lines = [
+      `Book: ${bookCorrect ? "✓" : "✗"}`,
+      answer.chapter !== null
+        ? `Chapter: ${chapterCorrect ? "✓" : "✗"}`
+        : null,
+      answer.verse !== null
+        ? `Verse: ${verseCorrect ? "✓" : "✗"}`
+        : null,
+      "",
+      `Answer: ${current.reference}`,
+      "",
+      current.text,
+    ].filter((line) => line !== null);
+
+    setResult(lines.join("\n"));
   }
 
   const displayText =
@@ -109,11 +187,19 @@ ${current.text}`
           Guess the reference from the verse or heading.
         </p>
 
-        <div className="dark:text-gray-300 mb-6">
-          <span className="font-bold">
-            Score:
-          </span>{" "}
-          {correct} / {total}
+        <div className="dark:text-gray-300 mb-6 flex gap-6 flex-wrap">
+          <div>
+            <span className="font-bold">Book:</span>{" "}
+            {score.book.correct} / {score.book.total}
+          </div>
+          <div>
+            <span className="font-bold">Chapter:</span>{" "}
+            {score.chapter.correct} / {score.chapter.total}
+          </div>
+          <div>
+            <span className="font-bold">Verse:</span>{" "}
+            {score.verse.correct} / {score.verse.total}
+          </div>
         </div>
 
         <div className="rounded-lg border border-gray-300 dark:border-gray-700 p-6 mb-6 shadow-sm">
