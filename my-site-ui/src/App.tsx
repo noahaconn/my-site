@@ -3,7 +3,7 @@ import SidebarWeb from './components/web/SidebarWeb.tsx'
 import Home from "./components/pages/Home.tsx";
 import Topbar from "./components/Topbar.tsx";
 import Bio from "./components/pages/Bio.tsx";
-import BoMQuiz from "./components/pages/BOMQuiz.tsx";
+import BoMQuiz from "./components/pages/BoMQuiz.tsx";
 import GreekReader from "./components/pages/GreekReader.tsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CONNrWeb from "./components/web/CONNrWeb.tsx";
