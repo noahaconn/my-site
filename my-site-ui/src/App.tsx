@@ -4,6 +4,7 @@ import Home from "./components/pages/Home.tsx";
 import Topbar from "./components/Topbar.tsx";
 import Bio from "./components/pages/Bio.tsx";
 import BoMQuiz from "./components/pages/BOMQuiz.tsx";
+import GreekReader from "./components/pages/GreekReader.tsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CONNrWeb from "./components/web/CONNrWeb.tsx";
 
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/" element={<Home openSide={sidebarOpen} openConnr={connrOpen}/>} />
             <Route path="/bio" element={<Bio openSide={sidebarOpen} openConnr={connrOpen}/>} />
             <Route path="/bom-quiz" element={<BoMQuiz openSide={sidebarOpen} openConnr={connrOpen}/>} />
+            <Route path="/greek-reader" element={<GreekReader openSide={sidebarOpen} openConnr={connrOpen}/>} />
           </Routes>
 
           <CONNrWeb open={connrOpen} setOpen={setConnrOpen}></CONNrWeb>

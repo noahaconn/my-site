@@ -33,6 +33,9 @@ export default function SidebarWeb({ open, setOpen }: SidebarProps) {
             <Link to="/bom-quiz" className="block rounded px-2 py-1 hover:bg-gray-200 dark:hover:bg-gray-800">
               BoM Quiz
             </Link>
+            <Link to="/greek-reader" className="block rounded px-2 py-1 hover:bg-gray-200 dark:hover:bg-gray-800">
+              Greek Reader
+            </Link>
             <Link to="#" className="block rounded px-2 py-1">
               More Coming Soon...
             </Link>

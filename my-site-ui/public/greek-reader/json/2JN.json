@@ -1,0 +1,2098 @@
+[
+  {
+    "id": "2JN.1.1",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 1,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "Ὁ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NSM",
+        "english": "The"
+      },
+      {
+        "id": "02",
+        "surface": "πρεσβύτερος",
+        "lemma": "πρεσβύτερος",
+        "strong": "G4245",
+        "morph": "N-NSM",
+        "english": "elder"
+      },
+      {
+        "id": "03",
+        "surface": "ἐκλεκτῇ",
+        "lemma": "ἐκλεκτός",
+        "strong": "G1588",
+        "morph": "A-DSF",
+        "english": "To [the] elect"
+      },
+      {
+        "id": "04",
+        "surface": "κυρίᾳ",
+        "lemma": "Κυρία",
+        "strong": "G2959",
+        "morph": "N-DSF",
+        "english": "lady"
+      },
+      {
+        "id": "05",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "06",
+        "surface": "τοῖς",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-DPN",
+        "english": "to the"
+      },
+      {
+        "id": "07",
+        "surface": "τέκνοις",
+        "lemma": "τέκνον",
+        "strong": "G5043",
+        "morph": "N-DPN",
+        "english": "children"
+      },
+      {
+        "id": "08",
+        "surface": "αὐτῆς",
+        "lemma": "αὐτός",
+        "strong": "G0846",
+        "morph": "P-GSF",
+        "english": "of her"
+      },
+      {
+        "id": "09",
+        "surface": "οὓς",
+        "lemma": "ὅς, ἥ",
+        "strong": "G3739",
+        "morph": "R-APM",
+        "english": "whom"
+      },
+      {
+        "id": "10",
+        "surface": "ἐγὼ",
+        "lemma": "ἐγώ",
+        "strong": "G1473",
+        "morph": "P-1NS",
+        "english": "I myself"
+      },
+      {
+        "id": "11",
+        "surface": "ἀγαπῶ",
+        "lemma": "ἀγαπάω",
+        "strong": "G0025",
+        "morph": "V-PAI-1S",
+        "english": "love"
+      },
+      {
+        "id": "12",
+        "surface": "ἐν",
+        "lemma": "ἐν",
+        "strong": "G1722",
+        "morph": "PREP",
+        "english": "in"
+      },
+      {
+        "id": "13",
+        "surface": "ἀληθείᾳ,",
+        "lemma": "ἀλήθεια",
+        "strong": "G0225",
+        "morph": "N-DSF",
+        "english": "truth,"
+      },
+      {
+        "id": "14",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "15",
+        "surface": "οὐκ",
+        "lemma": "οὐ",
+        "strong": "G3756",
+        "morph": "PRT-N",
+        "english": "not"
+      },
+      {
+        "id": "16",
+        "surface": "ἐγὼ",
+        "lemma": "ἐγώ",
+        "strong": "G1473",
+        "morph": "P-1NS",
+        "english": "I myself"
+      },
+      {
+        "id": "17",
+        "surface": "μόνος,",
+        "lemma": "μόνος",
+        "strong": "G3441",
+        "morph": "A-NSM",
+        "english": "only,"
+      },
+      {
+        "id": "18",
+        "surface": "ἀλλὰ",
+        "lemma": "ἀλλά",
+        "strong": "G0235",
+        "morph": "CONJ",
+        "english": "but"
+      },
+      {
+        "id": "19",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "also"
+      },
+      {
+        "id": "20",
+        "surface": "πάντες",
+        "lemma": "πᾶς",
+        "strong": "G3956",
+        "morph": "A-NPM",
+        "english": "all"
+      },
+      {
+        "id": "21",
+        "surface": "οἱ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NPM",
+        "english": "those"
+      },
+      {
+        "id": "22",
+        "surface": "ἐγνωκότες",
+        "lemma": "γινώσκω",
+        "strong": "G1097",
+        "morph": "V-RAP-NPM",
+        "english": "already knowing"
+      },
+      {
+        "id": "23",
+        "surface": "τὴν",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-ASF",
+        "english": "the"
+      },
+      {
+        "id": "24",
+        "surface": "ἀλήθειαν,",
+        "lemma": "ἀλήθεια",
+        "strong": "G0225",
+        "morph": "N-ASF",
+        "english": "truth —"
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.2",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 2,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "διὰ",
+        "lemma": "διά",
+        "strong": "G1223",
+        "morph": "PREP",
+        "english": "because of"
+      },
+      {
+        "id": "02",
+        "surface": "τὴν",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-ASF",
+        "english": "the"
+      },
+      {
+        "id": "03",
+        "surface": "ἀλήθειαν",
+        "lemma": "ἀλήθεια",
+        "strong": "G0225",
+        "morph": "N-ASF",
+        "english": "truth"
+      },
+      {
+        "id": "04",
+        "surface": "τὴν",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-ASF",
+        "english": "which"
+      },
+      {
+        "id": "05",
+        "surface": "μένουσαν",
+        "lemma": "μένω",
+        "strong": "G3306",
+        "morph": "V-PAP-ASF",
+        "english": "is abiding"
+      },
+      {
+        "id": "06",
+        "surface": "ἐν",
+        "lemma": "ἐν",
+        "strong": "G1722",
+        "morph": "PREP",
+        "english": "in"
+      },
+      {
+        "id": "07",
+        "surface": "ἡμῖν,",
+        "lemma": "ἐγώ",
+        "strong": "G3165",
+        "morph": "P-1DP",
+        "english": "us"
+      },
+      {
+        "id": "08",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "09",
+        "surface": "μεθ᾽",
+        "lemma": "μετά",
+        "strong": "G3326",
+        "morph": "PREP",
+        "english": "with"
+      },
+      {
+        "id": "10",
+        "surface": "ἡμῶν",
+        "lemma": "ἐγώ",
+        "strong": "G3165",
+        "morph": "P-1GP",
+        "english": "us"
+      },
+      {
+        "id": "11",
+        "surface": "ἔσται",
+        "lemma": "εἰμί",
+        "strong": "G1510",
+        "morph": "V-FDI-3S",
+        "english": "that will be"
+      },
+      {
+        "id": "12",
+        "surface": "εἰς",
+        "lemma": "εἰς",
+        "strong": "G1519",
+        "morph": "PREP",
+        "english": "to"
+      },
+      {
+        "id": "13",
+        "surface": "τὸν",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-ASM",
+        "english": "the"
+      },
+      {
+        "id": "14",
+        "surface": "αἰῶνα·",
+        "lemma": "αἰών",
+        "strong": "G0165",
+        "morph": "N-ASM",
+        "english": "age:"
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.3",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 3,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "ἔσται",
+        "lemma": "εἰμί",
+        "strong": "G1510",
+        "morph": "V-FDI-3S",
+        "english": "Will be"
+      },
+      {
+        "id": "02",
+        "surface": "μεθ᾽",
+        "lemma": "μετά",
+        "strong": "G3326",
+        "morph": "PREP",
+        "english": "with"
+      },
+      {
+        "id": "03",
+        "surface": "ἡμῶν",
+        "lemma": "ἐγώ",
+        "strong": "G3165",
+        "morph": "P-1GP",
+        "english": "us"
+      },
+      {
+        "id": "04",
+        "surface": "χάρις",
+        "lemma": "χάρις",
+        "strong": "G5485",
+        "morph": "N-NSF",
+        "english": "grace"
+      },
+      {
+        "id": "05",
+        "surface": "ἔλεος",
+        "lemma": "ἔλεος",
+        "strong": "G1656",
+        "morph": "N-NSN",
+        "english": "mercy"
+      },
+      {
+        "id": "06",
+        "surface": "εἰρήνη",
+        "lemma": "εἰρήνη",
+        "strong": "G1515",
+        "morph": "N-NSF",
+        "english": "[and] peace"
+      },
+      {
+        "id": "07",
+        "surface": "παρὰ",
+        "lemma": "παρά",
+        "strong": "G3844",
+        "morph": "PREP",
+        "english": "from"
+      },
+      {
+        "id": "08",
+        "surface": "θεοῦ",
+        "lemma": "θεός",
+        "strong": "G2316",
+        "morph": "N-GSM-T",
+        "english": "God"
+      },
+      {
+        "id": "09",
+        "surface": "πατρὸς",
+        "lemma": "πατήρ",
+        "strong": "G3962",
+        "morph": "N-GSM-T",
+        "english": "[the] Father"
+      },
+      {
+        "id": "10",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "11",
+        "surface": "παρὰ",
+        "lemma": "παρά",
+        "strong": "G3844",
+        "morph": "PREP",
+        "english": "from"
+      },
+      {
+        "id": "12",
+        "surface": "κυρίου",
+        "lemma": "κύριος",
+        "strong": "G2962",
+        "morph": "N-GSM-T",
+        "english": "Lord"
+      },
+      {
+        "id": "13",
+        "surface": "Ἰησοῦ",
+        "lemma": "Ἰησοῦς",
+        "strong": "G2424",
+        "morph": "N-GSM-P",
+        "english": "Jesus"
+      },
+      {
+        "id": "14",
+        "surface": "Χριστοῦ",
+        "lemma": "Χριστός",
+        "strong": "G5547",
+        "morph": "N-GSM-T",
+        "english": "Christ"
+      },
+      {
+        "id": "15",
+        "surface": "τοῦ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-GSM",
+        "english": "the"
+      },
+      {
+        "id": "16",
+        "surface": "υἱοῦ",
+        "lemma": "υἱός",
+        "strong": "G5207",
+        "morph": "N-GSM",
+        "english": "Son"
+      },
+      {
+        "id": "17",
+        "surface": "τοῦ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-GSM",
+        "english": "of the"
+      },
+      {
+        "id": "18",
+        "surface": "πατρὸς",
+        "lemma": "πατήρ",
+        "strong": "G3962",
+        "morph": "N-GSM-T",
+        "english": "Father"
+      },
+      {
+        "id": "19",
+        "surface": "ἐν",
+        "lemma": "ἐν",
+        "strong": "G1722",
+        "morph": "PREP",
+        "english": "in"
+      },
+      {
+        "id": "20",
+        "surface": "ἀληθείᾳ",
+        "lemma": "ἀλήθεια",
+        "strong": "G0225",
+        "morph": "N-DSF",
+        "english": "truth"
+      },
+      {
+        "id": "21",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "22",
+        "surface": "ἀγάπῃ.¶",
+        "lemma": "ἀγάπη",
+        "strong": "G0026",
+        "morph": "N-DSF",
+        "english": "love."
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.4",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 4,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "Ἐχάρην",
+        "lemma": "χαίρω",
+        "strong": "G5463",
+        "morph": "V-2AOI-1S",
+        "english": "I rejoiced"
+      },
+      {
+        "id": "02",
+        "surface": "λίαν",
+        "lemma": "λίαν",
+        "strong": "G3029",
+        "morph": "ADV",
+        "english": "exceedingly"
+      },
+      {
+        "id": "03",
+        "surface": "ὅτι",
+        "lemma": "ὅτι",
+        "strong": "G3754",
+        "morph": "CONJ",
+        "english": "that"
+      },
+      {
+        "id": "04",
+        "surface": "εὕρηκα",
+        "lemma": "εὑρίσκω",
+        "strong": "G2147",
+        "morph": "V-RAI-1S",
+        "english": "I have found"
+      },
+      {
+        "id": "05",
+        "surface": "ἐκ",
+        "lemma": "ἐκ",
+        "strong": "G1537",
+        "morph": "PREP",
+        "english": "[some] of"
+      },
+      {
+        "id": "06",
+        "surface": "τῶν",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-GPN",
+        "english": "the"
+      },
+      {
+        "id": "07",
+        "surface": "τέκνων",
+        "lemma": "τέκνον",
+        "strong": "G5043",
+        "morph": "N-GPN",
+        "english": "children"
+      },
+      {
+        "id": "08",
+        "surface": "σου",
+        "lemma": "σύ",
+        "strong": "G4771",
+        "morph": "P-2GS",
+        "english": "of you"
+      },
+      {
+        "id": "09",
+        "surface": "περιπατοῦντας",
+        "lemma": "περιπατέω",
+        "strong": "G4043",
+        "morph": "V-PAP-APM",
+        "english": "walking"
+      },
+      {
+        "id": "10",
+        "surface": "ἐν",
+        "lemma": "ἐν",
+        "strong": "G1722",
+        "morph": "PREP",
+        "english": "in"
+      },
+      {
+        "id": "11",
+        "surface": "ἀληθείᾳ",
+        "lemma": "ἀλήθεια",
+        "strong": "G0225",
+        "morph": "N-DSF",
+        "english": "truth"
+      },
+      {
+        "id": "12",
+        "surface": "καθὼς",
+        "lemma": "καθώς",
+        "strong": "G2531",
+        "morph": "CONJ",
+        "english": "even as"
+      },
+      {
+        "id": "13",
+        "surface": "ἐντολὴν",
+        "lemma": "ἐντολή",
+        "strong": "G1785",
+        "morph": "N-ASF",
+        "english": "commandment"
+      },
+      {
+        "id": "14",
+        "surface": "ἐλάβομεν",
+        "lemma": "λαμβάνω",
+        "strong": "G2983",
+        "morph": "V-2AAI-1P",
+        "english": "we received"
+      },
+      {
+        "id": "15",
+        "surface": "παρὰ",
+        "lemma": "παρά",
+        "strong": "G3844",
+        "morph": "PREP",
+        "english": "from"
+      },
+      {
+        "id": "16",
+        "surface": "τοῦ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-GSM",
+        "english": "the"
+      },
+      {
+        "id": "17",
+        "surface": "πατρός.",
+        "lemma": "πατήρ",
+        "strong": "G3962",
+        "morph": "N-GSM-T",
+        "english": "Father."
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.5",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 5,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "And"
+      },
+      {
+        "id": "02",
+        "surface": "νῦν",
+        "lemma": "νῦν",
+        "strong": "G3568",
+        "morph": "ADV",
+        "english": "now"
+      },
+      {
+        "id": "03",
+        "surface": "ἐρωτῶ",
+        "lemma": "ἐρωτάω",
+        "strong": "G2065",
+        "morph": "V-PAI-1S",
+        "english": "I implore"
+      },
+      {
+        "id": "04",
+        "surface": "σε,",
+        "lemma": "σύ",
+        "strong": "G4771",
+        "morph": "P-2AS",
+        "english": "you,"
+      },
+      {
+        "id": "05",
+        "surface": "κυρία,",
+        "lemma": "Κυρία",
+        "strong": "G2959",
+        "morph": "N-VSF",
+        "english": "lady,"
+      },
+      {
+        "id": "06",
+        "surface": "οὐχ",
+        "lemma": "οὐ",
+        "strong": "G3756",
+        "morph": "PRT-N",
+        "english": "not"
+      },
+      {
+        "id": "07",
+        "surface": "ὡς",
+        "lemma": "ὡς",
+        "strong": "G5613",
+        "morph": "PRT",
+        "english": "as"
+      },
+      {
+        "id": "08",
+        "surface": "ἐντολὴν",
+        "lemma": "ἐντολή",
+        "strong": "G1785",
+        "morph": "N-ASF",
+        "english": "a commandment"
+      },
+      {
+        "id": "09",
+        "surface": "καινὴν",
+        "lemma": "καινός",
+        "strong": "G2537",
+        "morph": "A-ASF",
+        "english": "new"
+      },
+      {
+        "id": "10",
+        "surface": "γράφων",
+        "lemma": "γράφω",
+        "strong": "G1125",
+        "morph": "V-PAP-NSM",
+        "english": "I am writing"
+      },
+      {
+        "id": "11",
+        "surface": "σοι,",
+        "lemma": "σύ",
+        "strong": "G4771",
+        "morph": "P-2DS",
+        "english": "to you"
+      },
+      {
+        "id": "12",
+        "surface": "ἀλλ᾽",
+        "lemma": "ἀλλά",
+        "strong": "G0235",
+        "morph": "CONJ",
+        "english": "but"
+      },
+      {
+        "id": "13",
+        "surface": "ἣν",
+        "lemma": "ὅς, ἥ",
+        "strong": "G3739",
+        "morph": "R-ASF",
+        "english": "that which"
+      },
+      {
+        "id": "14",
+        "surface": "εἴχομεν",
+        "lemma": "ἔχω",
+        "strong": "G2192",
+        "morph": "V-IAI-1P",
+        "english": "we have had"
+      },
+      {
+        "id": "15",
+        "surface": "ἀπ᾽",
+        "lemma": "ἀπό",
+        "strong": "G0575",
+        "morph": "PREP",
+        "english": "from"
+      },
+      {
+        "id": "16",
+        "surface": "ἀρχῆς,",
+        "lemma": "ἀρχή",
+        "strong": "G0746",
+        "morph": "N-GSF",
+        "english": "[the] beginning,"
+      },
+      {
+        "id": "17",
+        "surface": "ἵνα",
+        "lemma": "ἵνα",
+        "strong": "G2443",
+        "morph": "CONJ",
+        "english": "that"
+      },
+      {
+        "id": "18",
+        "surface": "ἀγαπῶμεν",
+        "lemma": "ἀγαπάω",
+        "strong": "G0025",
+        "morph": "V-PAS-1P",
+        "english": "we may love"
+      },
+      {
+        "id": "19",
+        "surface": "ἀλλήλους.",
+        "lemma": "ἀλλήλων",
+        "strong": "G0240",
+        "morph": "C-APM",
+        "english": "one another."
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.6",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 6,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "And"
+      },
+      {
+        "id": "02",
+        "surface": "αὕτη",
+        "lemma": "οὗτος",
+        "strong": "G3778",
+        "morph": "D-NSF",
+        "english": "this"
+      },
+      {
+        "id": "03",
+        "surface": "ἐστὶν",
+        "lemma": "εἰμί",
+        "strong": "G1510",
+        "morph": "V-PAI-3S",
+        "english": "is"
+      },
+      {
+        "id": "04",
+        "surface": "ἡ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NSF",
+        "english": "<the>"
+      },
+      {
+        "id": "05",
+        "surface": "ἀγάπη",
+        "lemma": "ἀγάπη",
+        "strong": "G0026",
+        "morph": "N-NSF",
+        "english": "love"
+      },
+      {
+        "id": "06",
+        "surface": "ἵνα",
+        "lemma": "ἵνα",
+        "strong": "G2443",
+        "morph": "PREP",
+        "english": "that"
+      },
+      {
+        "id": "07",
+        "surface": "περιπατῶμεν",
+        "lemma": "περιπατέω",
+        "strong": "G4043",
+        "morph": "V-PAS-1P",
+        "english": "we may walk"
+      },
+      {
+        "id": "08",
+        "surface": "κατὰ",
+        "lemma": "κατά",
+        "strong": "G2596",
+        "morph": "PREP",
+        "english": "according to"
+      },
+      {
+        "id": "09",
+        "surface": "τὰς",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-APF",
+        "english": "the"
+      },
+      {
+        "id": "10",
+        "surface": "ἐντολὰς",
+        "lemma": "ἐντολή",
+        "strong": "G1785",
+        "morph": "N-APF",
+        "english": "commandments"
+      },
+      {
+        "id": "11",
+        "surface": "αὐτοῦ.",
+        "lemma": "αὐτός",
+        "strong": "G0846",
+        "morph": "P-GSM",
+        "english": "of Him."
+      },
+      {
+        "id": "12",
+        "surface": "αὕτη",
+        "lemma": "οὗτος",
+        "strong": "G3778",
+        "morph": "D-NSF",
+        "english": "This"
+      },
+      {
+        "id": "13",
+        "surface": "ἡ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NSF",
+        "english": "the"
+      },
+      {
+        "id": "14",
+        "surface": "ἐντολή",
+        "lemma": "ἐντολή",
+        "strong": "G1785",
+        "morph": "N-NSF",
+        "english": "commandment"
+      },
+      {
+        "id": "15",
+        "surface": "ἐστιν",
+        "lemma": "εἰμί",
+        "strong": "G1510",
+        "morph": "V-PAI-3S",
+        "english": "is"
+      },
+      {
+        "id": "16",
+        "surface": "καθὼς",
+        "lemma": "καθώς",
+        "strong": "G2531",
+        "morph": "CONJ",
+        "english": "even as"
+      },
+      {
+        "id": "17",
+        "surface": "ἠκούσατε",
+        "lemma": "ἀκούω",
+        "strong": "G0191",
+        "morph": "V-AAI-2P",
+        "english": "you have heard"
+      },
+      {
+        "id": "18",
+        "surface": "ἀπ᾽",
+        "lemma": "ἀπό",
+        "strong": "G0575",
+        "morph": "PREP",
+        "english": "from"
+      },
+      {
+        "id": "19",
+        "surface": "ἀρχῆς,",
+        "lemma": "ἀρχή",
+        "strong": "G0746",
+        "morph": "N-GSF",
+        "english": "[the] beginning,"
+      },
+      {
+        "id": "20",
+        "surface": "ἵνα",
+        "lemma": "ἵνα",
+        "strong": "G2443",
+        "morph": "PREP",
+        "english": "so that"
+      },
+      {
+        "id": "21",
+        "surface": "ἐν",
+        "lemma": "ἐν",
+        "strong": "G1722",
+        "morph": "PREP",
+        "english": "in"
+      },
+      {
+        "id": "22",
+        "surface": "αὐτῇ",
+        "lemma": "αὐτός",
+        "strong": "G0846",
+        "morph": "P-DSF",
+        "english": "it"
+      },
+      {
+        "id": "23",
+        "surface": "περιπατῆτε·",
+        "lemma": "περιπατέω",
+        "strong": "G4043",
+        "morph": "V-PAS-2P",
+        "english": "you may walk;"
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.7",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 7,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "ὅτι",
+        "lemma": "ὅτι",
+        "strong": "G3754",
+        "morph": "CONJ",
+        "english": "For"
+      },
+      {
+        "id": "02",
+        "surface": "πολλοὶ",
+        "lemma": "πολύς",
+        "strong": "G4183",
+        "morph": "A-NPM",
+        "english": "many"
+      },
+      {
+        "id": "03",
+        "surface": "πλάνοι",
+        "lemma": "πλάνος",
+        "strong": "G4108",
+        "morph": "A-NPM",
+        "english": "deceivers"
+      },
+      {
+        "id": "04",
+        "surface": "ἐξῆλθον",
+        "lemma": "ἐξέρχομαι",
+        "strong": "G1831",
+        "morph": "V-2AAI-3P",
+        "english": "have gone out"
+      },
+      {
+        "id": "05",
+        "surface": "εἰς",
+        "lemma": "εἰς",
+        "strong": "G1519",
+        "morph": "PREP",
+        "english": "into"
+      },
+      {
+        "id": "06",
+        "surface": "τὸν",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-ASM",
+        "english": "the"
+      },
+      {
+        "id": "07",
+        "surface": "κόσμον,",
+        "lemma": "κόσμος",
+        "strong": "G2889",
+        "morph": "N-ASM",
+        "english": "world,"
+      },
+      {
+        "id": "08",
+        "surface": "οἱ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NPM",
+        "english": "those"
+      },
+      {
+        "id": "09",
+        "surface": "μὴ",
+        "lemma": "μή",
+        "strong": "G3361",
+        "morph": "PRT-N",
+        "english": "not"
+      },
+      {
+        "id": "10",
+        "surface": "ὁμολογοῦντες",
+        "lemma": "ὁμολογέω",
+        "strong": "G3670",
+        "morph": "V-PAP-NPM",
+        "english": "confessing"
+      },
+      {
+        "id": "11",
+        "surface": "Ἰησοῦν",
+        "lemma": "Ἰησοῦς",
+        "strong": "G2424",
+        "morph": "N-ASM-P",
+        "english": "Jesus"
+      },
+      {
+        "id": "12",
+        "surface": "Χριστὸν",
+        "lemma": "Χριστός",
+        "strong": "G5547",
+        "morph": "N-ASM-T",
+        "english": "Christ"
+      },
+      {
+        "id": "13",
+        "surface": "ἐρχόμενον",
+        "lemma": "ἔρχομαι",
+        "strong": "G2064",
+        "morph": "V-PNP-ASM",
+        "english": "coming"
+      },
+      {
+        "id": "14",
+        "surface": "ἐν",
+        "lemma": "ἐν",
+        "strong": "G1722",
+        "morph": "PREP",
+        "english": "in"
+      },
+      {
+        "id": "15",
+        "surface": "σαρκί·",
+        "lemma": "σάρξ",
+        "strong": "G4561",
+        "morph": "N-DSF",
+        "english": "flesh;"
+      },
+      {
+        "id": "16",
+        "surface": "οὗτός",
+        "lemma": "οὗτος",
+        "strong": "G3778",
+        "morph": "D-NSM",
+        "english": "This"
+      },
+      {
+        "id": "17",
+        "surface": "ἐστιν",
+        "lemma": "εἰμί",
+        "strong": "G1510",
+        "morph": "V-PAI-3S",
+        "english": "is"
+      },
+      {
+        "id": "18",
+        "surface": "ὁ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NSM",
+        "english": "the"
+      },
+      {
+        "id": "19",
+        "surface": "πλάνος",
+        "lemma": "πλάνος",
+        "strong": "G4108",
+        "morph": "A-NSM",
+        "english": "deceiver"
+      },
+      {
+        "id": "20",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "21",
+        "surface": "ὁ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NSM",
+        "english": "the"
+      },
+      {
+        "id": "22",
+        "surface": "ἀντίχριστος.",
+        "lemma": "ἀντίχριστος",
+        "strong": "G0500",
+        "morph": "N-NSM",
+        "english": "antichrist."
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.8",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 8,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "βλέπετε",
+        "lemma": "βλέπω",
+        "strong": "G0991",
+        "morph": "V-PAM-2P",
+        "english": "do watch"
+      },
+      {
+        "id": "02",
+        "surface": "ἑαυτοὺς",
+        "lemma": "ἑαυτοῦ",
+        "strong": "G1438",
+        "morph": "F-2APM",
+        "english": "yourselves"
+      },
+      {
+        "id": "03",
+        "surface": "ἵνα",
+        "lemma": "ἵνα",
+        "strong": "G2443",
+        "morph": "CONJ",
+        "english": "so that"
+      },
+      {
+        "id": "04",
+        "surface": "μὴ",
+        "lemma": "μή",
+        "strong": "G3361",
+        "morph": "PRT-N",
+        "english": "not"
+      },
+      {
+        "id": "05",
+        "surface": "ἀπολέσητε",
+        "lemma": "ἀπολλύω",
+        "strong": "G0622",
+        "morph": "V-AAS-2P",
+        "english": "you may lose"
+      },
+      {
+        "id": "06",
+        "surface": "ἃ",
+        "lemma": "ὅς, ἥ",
+        "strong": "G3739",
+        "morph": "R-APN",
+        "english": "what things"
+      },
+      {
+        "id": "07",
+        "surface": "εἰργασάμεθα,",
+        "lemma": "ἐργάζομαι",
+        "strong": "G2038",
+        "morph": "V-ADI-1P",
+        "english": "we have worked for,"
+      },
+      {
+        "id": "08",
+        "surface": "ἀλλὰ",
+        "lemma": "ἀλλά",
+        "strong": "G0235",
+        "morph": "CONJ",
+        "english": "but"
+      },
+      {
+        "id": "09",
+        "surface": "μισθὸν",
+        "lemma": "μισθός",
+        "strong": "G3408",
+        "morph": "N-ASM",
+        "english": "a reward"
+      },
+      {
+        "id": "10",
+        "surface": "πλήρη",
+        "lemma": "πλήρης",
+        "strong": "G4134",
+        "morph": "A-ASM",
+        "english": "full"
+      },
+      {
+        "id": "11",
+        "surface": "ἀπολάβητε.",
+        "lemma": "ἀπολαμβάνω",
+        "strong": "G0618",
+        "morph": "V-2AAS-2P",
+        "english": "you may receive."
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.9",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 9,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "πᾶς",
+        "lemma": "πᾶς",
+        "strong": "G3956",
+        "morph": "A-NSM",
+        "english": "Anyone"
+      },
+      {
+        "id": "02",
+        "surface": "ὁ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NSM",
+        "english": "who"
+      },
+      {
+        "id": "03",
+        "surface": "προάγων",
+        "lemma": "προάγω",
+        "strong": "G4254",
+        "morph": "V-PAP-NSM",
+        "english": "is progressing"
+      },
+      {
+        "id": "04",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "05",
+        "surface": "μὴ",
+        "lemma": "μή",
+        "strong": "G3361",
+        "morph": "PRT-N",
+        "english": "not"
+      },
+      {
+        "id": "06",
+        "surface": "μένων",
+        "lemma": "μένω",
+        "strong": "G3306",
+        "morph": "V-PAP-NSM",
+        "english": "abiding"
+      },
+      {
+        "id": "07",
+        "surface": "ἐν",
+        "lemma": "ἐν",
+        "strong": "G1722",
+        "morph": "PREP",
+        "english": "in"
+      },
+      {
+        "id": "08",
+        "surface": "τῇ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-DSF",
+        "english": "the"
+      },
+      {
+        "id": "09",
+        "surface": "διδαχῇ",
+        "lemma": "διδαχή",
+        "strong": "G1322",
+        "morph": "N-DSF",
+        "english": "teaching"
+      },
+      {
+        "id": "10",
+        "surface": "τοῦ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-GSM",
+        "english": "<the>"
+      },
+      {
+        "id": "11",
+        "surface": "Χριστοῦ",
+        "lemma": "Χριστός",
+        "strong": "G5547",
+        "morph": "N-GSM-T",
+        "english": "of Christ"
+      },
+      {
+        "id": "12",
+        "surface": "θεὸν",
+        "lemma": "θεός",
+        "strong": "G2316",
+        "morph": "N-ASM-T",
+        "english": "God"
+      },
+      {
+        "id": "13",
+        "surface": "οὐκ",
+        "lemma": "οὐ",
+        "strong": "G3756",
+        "morph": "PRT-N",
+        "english": "not"
+      },
+      {
+        "id": "14",
+        "surface": "ἔχει·",
+        "lemma": "ἔχω",
+        "strong": "G2192",
+        "morph": "V-PAI-3S",
+        "english": "has;"
+      },
+      {
+        "id": "15",
+        "surface": "ὁ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NSM",
+        "english": "The [one]"
+      },
+      {
+        "id": "16",
+        "surface": "μένων",
+        "lemma": "μένω",
+        "strong": "G3306",
+        "morph": "V-PAP-NSM",
+        "english": "abiding"
+      },
+      {
+        "id": "17",
+        "surface": "ἐν",
+        "lemma": "ἐν",
+        "strong": "G1722",
+        "morph": "PREP",
+        "english": "in"
+      },
+      {
+        "id": "18",
+        "surface": "τῇ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-DSF",
+        "english": "the"
+      },
+      {
+        "id": "19",
+        "surface": "διδαχῇ",
+        "lemma": "διδαχή",
+        "strong": "G1322",
+        "morph": "N-DSF",
+        "english": "teaching"
+      },
+      {
+        "id": "20",
+        "surface": "τοῦ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-GSM",
+        "english": "of the"
+      },
+      {
+        "id": "21",
+        "surface": "Χριστοῦ,",
+        "lemma": "Χριστός",
+        "strong": "G5547",
+        "morph": "N-GSM-T",
+        "english": "Christ"
+      },
+      {
+        "id": "22",
+        "surface": "οὗτος",
+        "lemma": "οὗτος",
+        "strong": "G3778",
+        "morph": "D-NSM",
+        "english": "this [one]"
+      },
+      {
+        "id": "23",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "both"
+      },
+      {
+        "id": "24",
+        "surface": "τὸν",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-ASM",
+        "english": "the"
+      },
+      {
+        "id": "25",
+        "surface": "πατέρα",
+        "lemma": "πατήρ",
+        "strong": "G3962",
+        "morph": "N-ASM-T",
+        "english": "Father"
+      },
+      {
+        "id": "26",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "27",
+        "surface": "τὸν",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-ASM",
+        "english": "the"
+      },
+      {
+        "id": "28",
+        "surface": "υἱὸν",
+        "lemma": "υἱός",
+        "strong": "G5207",
+        "morph": "N-ASM",
+        "english": "Son"
+      },
+      {
+        "id": "29",
+        "surface": "ἔχει.",
+        "lemma": "ἔχω",
+        "strong": "G2192",
+        "morph": "V-PAI-3S",
+        "english": "has."
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.10",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 10,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "εἴ",
+        "lemma": "εἰ",
+        "strong": "G1487",
+        "morph": "COND",
+        "english": "If"
+      },
+      {
+        "id": "02",
+        "surface": "τις",
+        "lemma": "τις",
+        "strong": "G5100",
+        "morph": "X-NSM",
+        "english": "anyone"
+      },
+      {
+        "id": "03",
+        "surface": "ἔρχεται",
+        "lemma": "ἔρχομαι",
+        "strong": "G2064",
+        "morph": "V-PNI-3S",
+        "english": "comes"
+      },
+      {
+        "id": "04",
+        "surface": "πρὸς",
+        "lemma": "πρός",
+        "strong": "G4314",
+        "morph": "PREP",
+        "english": "to"
+      },
+      {
+        "id": "05",
+        "surface": "ὑμᾶς",
+        "lemma": "σύ",
+        "strong": "G4771",
+        "morph": "P-2AP",
+        "english": "you"
+      },
+      {
+        "id": "06",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "07",
+        "surface": "ταύτην",
+        "lemma": "οὗτος",
+        "strong": "G3778",
+        "morph": "D-ASF",
+        "english": "this"
+      },
+      {
+        "id": "08",
+        "surface": "τὴν",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-ASF",
+        "english": "<the>"
+      },
+      {
+        "id": "09",
+        "surface": "διδαχὴν",
+        "lemma": "διδαχή",
+        "strong": "G1322",
+        "morph": "N-ASF",
+        "english": "teaching"
+      },
+      {
+        "id": "10",
+        "surface": "οὐ",
+        "lemma": "οὐ",
+        "strong": "G3756",
+        "morph": "PRT-N",
+        "english": "not"
+      },
+      {
+        "id": "11",
+        "surface": "φέρει,",
+        "lemma": "φέρω",
+        "strong": "G5342",
+        "morph": "V-PAI-3S",
+        "english": "does bring,"
+      },
+      {
+        "id": "12",
+        "surface": "μὴ",
+        "lemma": "μή",
+        "strong": "G3361",
+        "morph": "PRT-N",
+        "english": "not"
+      },
+      {
+        "id": "13",
+        "surface": "λαμβάνετε",
+        "lemma": "λαμβάνω",
+        "strong": "G2983",
+        "morph": "V-PAM-2P",
+        "english": "do receive"
+      },
+      {
+        "id": "14",
+        "surface": "αὐτὸν",
+        "lemma": "αὐτός",
+        "strong": "G0846",
+        "morph": "P-ASM",
+        "english": "him"
+      },
+      {
+        "id": "15",
+        "surface": "εἰς",
+        "lemma": "εἰς",
+        "strong": "G1519",
+        "morph": "PREP",
+        "english": "into"
+      },
+      {
+        "id": "16",
+        "surface": "οἰκίαν,",
+        "lemma": "οἰκία",
+        "strong": "G3614",
+        "morph": "N-ASF",
+        "english": "[the] house,"
+      },
+      {
+        "id": "17",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "18",
+        "surface": "χαίρειν",
+        "lemma": "χαίρω",
+        "strong": "G5463",
+        "morph": "V-PAN",
+        "english": "to greet"
+      },
+      {
+        "id": "19",
+        "surface": "αὐτῷ",
+        "lemma": "αὐτός",
+        "strong": "G0846",
+        "morph": "P-DSM",
+        "english": "him"
+      },
+      {
+        "id": "20",
+        "surface": "μὴ",
+        "lemma": "μή",
+        "strong": "G3361",
+        "morph": "PRT-N",
+        "english": "not"
+      },
+      {
+        "id": "21",
+        "surface": "λέγετε·",
+        "lemma": "λέγω",
+        "strong": "G3004",
+        "morph": "V-PAM-2P",
+        "english": "do tell;"
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.11",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 11,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "ὁ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NSM",
+        "english": "the [one]"
+      },
+      {
+        "id": "02",
+        "surface": "λέγων",
+        "lemma": "λέγω",
+        "strong": "G3004",
+        "morph": "V-PAP-NSM",
+        "english": "telling"
+      },
+      {
+        "id": "03",
+        "surface": "γὰρ",
+        "lemma": "γάρ",
+        "strong": "G1063",
+        "morph": "CONJ",
+        "english": "for"
+      },
+      {
+        "id": "04",
+        "surface": "αὐτῷ",
+        "lemma": "αὐτός",
+        "strong": "G0846",
+        "morph": "P-DSM",
+        "english": "him"
+      },
+      {
+        "id": "05",
+        "surface": "χαίρειν,",
+        "lemma": "χαίρω",
+        "strong": "G5463",
+        "morph": "V-PAN",
+        "english": "to rejoice"
+      },
+      {
+        "id": "06",
+        "surface": "κοινωνεῖ",
+        "lemma": "κοινωνέω",
+        "strong": "G2841",
+        "morph": "V-PAI-3S",
+        "english": "partakes"
+      },
+      {
+        "id": "07",
+        "surface": "τοῖς",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-DPN",
+        "english": "in the"
+      },
+      {
+        "id": "08",
+        "surface": "ἔργοις",
+        "lemma": "ἔργον",
+        "strong": "G2041",
+        "morph": "N-DPN",
+        "english": "works"
+      },
+      {
+        "id": "09",
+        "surface": "αὐτοῦ",
+        "lemma": "αὐτός",
+        "strong": "G0846",
+        "morph": "P-GSM",
+        "english": "of him"
+      },
+      {
+        "id": "10",
+        "surface": "τοῖς",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-DPN",
+        "english": "<the>"
+      },
+      {
+        "id": "11",
+        "surface": "πονηροῖς.¶",
+        "lemma": "πονηρός",
+        "strong": "G4190",
+        "morph": "A-DPN",
+        "english": "evil."
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.12",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 12,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "Πολλὰ",
+        "lemma": "πολύς",
+        "strong": "G4183",
+        "morph": "A-APN",
+        "english": "Many things"
+      },
+      {
+        "id": "02",
+        "surface": "ἔχων",
+        "lemma": "ἔχω",
+        "strong": "G2192",
+        "morph": "V-PAP-NSM",
+        "english": "having"
+      },
+      {
+        "id": "03",
+        "surface": "ὑμῖν",
+        "lemma": "σύ",
+        "strong": "G4771",
+        "morph": "P-2DP",
+        "english": "to you"
+      },
+      {
+        "id": "04",
+        "surface": "γράφειν",
+        "lemma": "γράφω",
+        "strong": "G1125",
+        "morph": "V-PAN",
+        "english": "to write"
+      },
+      {
+        "id": "05",
+        "surface": "οὐκ",
+        "lemma": "οὐ",
+        "strong": "G3756",
+        "morph": "PRT-N",
+        "english": "not"
+      },
+      {
+        "id": "06",
+        "surface": "ἐβουλήθην",
+        "lemma": "βούλομαι",
+        "strong": "G1014",
+        "morph": "V-AOI-1S",
+        "english": "I purposed"
+      },
+      {
+        "id": "07",
+        "surface": "διὰ",
+        "lemma": "διά",
+        "strong": "G1223",
+        "morph": "PREP",
+        "english": "with"
+      },
+      {
+        "id": "08",
+        "surface": "χάρτου",
+        "lemma": "χάρτης",
+        "strong": "G5489",
+        "morph": "N-GSM",
+        "english": "paper"
+      },
+      {
+        "id": "09",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "10",
+        "surface": "μέλανος·",
+        "lemma": "μέλαν",
+        "strong": "G3188",
+        "morph": "N-GSN",
+        "english": "ink;"
+      },
+      {
+        "id": "11",
+        "surface": "ἀλλ᾽",
+        "lemma": "ἀλλά",
+        "strong": "G0235",
+        "morph": "CONJ",
+        "english": "but"
+      },
+      {
+        "id": "12",
+        "surface": "ἐλπίζω",
+        "lemma": "ἐλπίζω",
+        "strong": "G1679",
+        "morph": "V-PAI-1S",
+        "english": "I hope"
+      },
+      {
+        "id": "13",
+        "surface": "γενέσθαι",
+        "lemma": "γίνομαι",
+        "strong": "G1096",
+        "morph": "V-2ADN",
+        "english": "to come"
+      },
+      {
+        "id": "14",
+        "surface": "πρὸς",
+        "lemma": "πρός",
+        "strong": "G4314",
+        "morph": "PREP",
+        "english": "to"
+      },
+      {
+        "id": "15",
+        "surface": "ὑμᾶς",
+        "lemma": "σύ",
+        "strong": "G4771",
+        "morph": "P-2AP",
+        "english": "you"
+      },
+      {
+        "id": "16",
+        "surface": "καὶ",
+        "lemma": "καί",
+        "strong": "G2532",
+        "morph": "CONJ",
+        "english": "and"
+      },
+      {
+        "id": "17",
+        "surface": "στόμα",
+        "lemma": "στόμα",
+        "strong": "G4750",
+        "morph": "N-ASN",
+        "english": "mouth"
+      },
+      {
+        "id": "18",
+        "surface": "πρὸς",
+        "lemma": "πρός",
+        "strong": "G4314",
+        "morph": "PREP",
+        "english": "to"
+      },
+      {
+        "id": "19",
+        "surface": "στόμα",
+        "lemma": "στόμα",
+        "strong": "G4750",
+        "morph": "N-ASN",
+        "english": "mouth"
+      },
+      {
+        "id": "20",
+        "surface": "λαλῆσαι",
+        "lemma": "λαλέω",
+        "strong": "G2980",
+        "morph": "V-AAN",
+        "english": "to speak"
+      },
+      {
+        "id": "21",
+        "surface": "ἵνα",
+        "lemma": "ἵνα",
+        "strong": "G2443",
+        "morph": "CONJ",
+        "english": "so that"
+      },
+      {
+        "id": "22",
+        "surface": "ἡ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NSF",
+        "english": "the"
+      },
+      {
+        "id": "23",
+        "surface": "χαρὰ",
+        "lemma": "χαρά",
+        "strong": "G5479",
+        "morph": "N-NSF",
+        "english": "joy"
+      },
+      {
+        "id": "24",
+        "surface": "ἡμῶν",
+        "lemma": "ἐγώ",
+        "strong": "G3165",
+        "morph": "P-1GP",
+        "english": "of us"
+      },
+      {
+        "id": "25",
+        "surface": "πεπληρωμένη",
+        "lemma": "πληρόω",
+        "strong": "G4137",
+        "morph": "V-RPP-NSF",
+        "english": "completed"
+      },
+      {
+        "id": "26",
+        "surface": "ᾖ.",
+        "lemma": "εἰμί",
+        "strong": "G1510",
+        "morph": "V-PAS-3S",
+        "english": "may be."
+      }
+    ]
+  },
+  {
+    "id": "2JN.1.13",
+    "book": "2JN",
+    "chapter": 1,
+    "verse": 13,
+    "tokens": [
+      {
+        "id": "01",
+        "surface": "ἀσπάζεταί",
+        "lemma": "ἀσπάζομαι",
+        "strong": "G0782",
+        "morph": "V-PNI-3S",
+        "english": "Greet"
+      },
+      {
+        "id": "02",
+        "surface": "σε",
+        "lemma": "σύ",
+        "strong": "G4771",
+        "morph": "P-2AS",
+        "english": "you"
+      },
+      {
+        "id": "03",
+        "surface": "τὰ",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-NPN",
+        "english": "the"
+      },
+      {
+        "id": "04",
+        "surface": "τέκνα",
+        "lemma": "τέκνον",
+        "strong": "G5043",
+        "morph": "N-NPN",
+        "english": "children"
+      },
+      {
+        "id": "05",
+        "surface": "τῆς",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-GSF",
+        "english": "of the"
+      },
+      {
+        "id": "06",
+        "surface": "ἀδελφῆς",
+        "lemma": "ἀδελφή",
+        "strong": "G0079",
+        "morph": "N-GSF",
+        "english": "sister"
+      },
+      {
+        "id": "07",
+        "surface": "σου",
+        "lemma": "σύ",
+        "strong": "G4771",
+        "morph": "P-2GS",
+        "english": "of you"
+      },
+      {
+        "id": "08",
+        "surface": "τῆς",
+        "lemma": "ὁ",
+        "strong": "G3588",
+        "morph": "T-GSF",
+        "english": "<the>"
+      },
+      {
+        "id": "09",
+        "surface": "ἐκλεκτῆς",
+        "lemma": "ἐκλεκτός",
+        "strong": "G1588",
+        "morph": "A-GSF",
+        "english": "elect"
+      },
+      {
+        "id": "10",
+        "surface": "ἀμήν.¶",
+        "lemma": "ἀμήν",
+        "strong": "G0281",
+        "morph": "INJ-HEB",
+        "english": "Amen."
+      }
+    ]
+  }
+]
