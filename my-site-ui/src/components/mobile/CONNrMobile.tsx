@@ -1,6 +1,7 @@
 import { ArrowUpIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 import { SparklesIcon } from "@heroicons/react/16/solid";
 import React, { useState } from 'react';
+import { API_URL } from '../../config';
 
 const initMsg = "Hi, I'm CONNr, Noah's AI Assistant. I can answer your questions about Noah. I have access to a lot more information than can be included on the site, so ask me anything!";
 
@@ -13,8 +14,6 @@ export default function CONNrMobile({ open, setOpen }: CONNrProps) {
   const [messages, setMessages] = useState<{ role: string; content: string }[]>([{role: "assistant", content: initMsg}]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-
-  const API_URL = 'https://r3uao1cq2a.execute-api.us-east-2.amazonaws.com/chat';
 
   async function sendMessage(e: React.FormEvent) {
     e.preventDefault();

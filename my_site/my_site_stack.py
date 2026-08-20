@@ -1,6 +1,15 @@
+import os
+import shutil
+import subprocess
+import sys
+
+import jsii
 from aws_cdk import (
+    Duration,
     Size,
     Stack,
+    BundlingOptions,
+    ILocalBundling,
     aws_s3 as s3,
     aws_s3_deployment as s3deploy,
     RemovalPolicy,
@@ -9,9 +18,57 @@ from aws_cdk import (
     aws_cloudfront_origins as origins,
     aws_certificatemanager as acm,
     aws_route53 as route53,
-    aws_route53_targets as targets
+    aws_route53_targets as targets,
+    aws_lambda as _lambda,
+    aws_apigatewayv2 as apigwv2,
+    aws_apigatewayv2_integrations as apigwv2_integrations,
+    aws_secretsmanager as secretsmanager,
 )
 from constructs import Construct
+
+
+@jsii.implements(ILocalBundling)
+class _PipLocalBundling:
+    """Packages the Lambda's dependencies using a plain local `pip install`
+    that targets Lambda's exact runtime platform (manylinux2014_x86_64,
+    CPython 3.13), pulling pre-built wheels straight from PyPI.
+
+    This deliberately avoids Docker/virtualization entirely — no container is
+    started, nothing is compiled locally. If a future dependency doesn't
+    publish a manylinux wheel and this fails, CDK automatically falls back to
+    the Docker-based `bundling` command below.
+    """
+
+    def __init__(self, source_dir: str):
+        self.source_dir = source_dir
+
+    def try_bundle(self, output_dir: str, *args, **kwargs) -> bool:
+        requirements = os.path.join(self.source_dir, "requirements.txt")
+        try:
+            subprocess.check_call([
+                sys.executable, "-m", "pip", "install",
+                "-r", requirements,
+                "--platform", "manylinux2014_x86_64",
+                "--implementation", "cp",
+                "--python-version", "3.13",
+                "--only-binary=:all:",
+                "--target", output_dir,
+            ])
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            return False
+
+        for item in os.listdir(self.source_dir):
+            if item == "requirements.txt":
+                continue
+            src = os.path.join(self.source_dir, item)
+            dst = os.path.join(output_dir, item)
+            if os.path.isdir(src):
+                shutil.copytree(src, dst, dirs_exist_ok=True)
+            else:
+                shutil.copy2(src, dst)
+
+        return True
+
 
 class MySiteStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs):
@@ -82,6 +139,62 @@ class MySiteStack(Stack):
             record_name="www.getconnexus.org",
             target=route53.RecordTarget.from_alias(targets.CloudFrontTarget(distribution)),
         )
+
+        # --- Chat API: Lambda + HTTP API ---
+        # Recreated in CDK (2026-08-19) to replace the previously console-managed
+        # API Gateway + Lambda, which had no IaC record at all. See CONNEXUS.md
+        # pain point #11. Source lives in ./lambda/portfolio_chat — vendored in from
+        # the separate `portfolio-chat` repo so this stack is fully self-contained
+        # and deployable from a fresh clone.
+
+        openai_secret = secretsmanager.Secret.from_secret_name_v2(
+            self, "OpenAiSecret", "portfolio_app/api_key"
+        )
+
+        lambda_source_dir = os.path.join(os.path.dirname(__file__), "..", "lambda", "portfolio_chat")
+
+        chat_lambda = _lambda.Function(
+            self, "PortfolioChatFunction",
+            runtime=_lambda.Runtime.PYTHON_3_13,
+            handler="lambda_function.lambda_handler",
+            code=_lambda.Code.from_asset(
+                "./lambda/portfolio_chat",
+                bundling=BundlingOptions(
+                    # Tried first, runs on your machine with no Docker/VM involved.
+                    local=_PipLocalBundling(os.path.abspath(lambda_source_dir)),
+                    # Only used if local bundling above returns False.
+                    image=_lambda.Runtime.PYTHON_3_13.bundling_image,
+                    command=[
+                        "bash", "-c",
+                        "pip install -r requirements.txt -t /asset-output && cp -au . /asset-output",
+                    ],
+                ),
+            ),
+            timeout=Duration.seconds(30),
+            memory_size=256,
+        )
+
+        # Least-privilege: only allow reading this one secret, not all of Secrets Manager.
+        openai_secret.grant_read(chat_lambda)
+
+        http_api = apigwv2.HttpApi(
+            self, "ChatApi",
+            cors_preflight=apigwv2.CorsPreflightOptions(
+                allow_origins=["https://getconnexus.org", "https://www.getconnexus.org"],
+                allow_methods=[apigwv2.CorsHttpMethod.POST, apigwv2.CorsHttpMethod.OPTIONS],
+                allow_headers=["Content-Type"],
+            ),
+        )
+
+        http_api.add_routes(
+            path="/chat",
+            methods=[apigwv2.HttpMethod.POST],
+            integration=apigwv2_integrations.HttpLambdaIntegration(
+                "ChatIntegration", chat_lambda
+            ),
+        )
+
+        CfnOutput(self, "ChatApiUrl", value=f"{http_api.api_endpoint}/chat")
 
         CfnOutput(self, "WebsiteURL", value=site_bucket.bucket_website_url)
 
