@@ -1,4 +1,5 @@
 from aws_cdk import (
+    Size,
     Stack,
     aws_s3 as s3,
     aws_s3_deployment as s3deploy,
@@ -31,7 +32,9 @@ class MySiteStack(Stack):
 
         s3deploy.BucketDeployment(self, "DeployWebsite",
             sources=[s3deploy.Source.asset("./my-site-ui/dist")],
-            destination_bucket=site_bucket
+            destination_bucket=site_bucket,
+            memory_limit=3008,               # up from default 128 MB
+            ephemeral_storage_size=Size.mebibytes(2048),  # /tmp space for unzip, also small by default
         )
 
         certificate = acm.Certificate.from_certificate_arn(
