@@ -30,20 +30,8 @@ class MySiteStack(Stack):
             auto_delete_objects=True
         )
 
-        s3deploy.BucketDeployment(self, "DeployWebsite",
-            sources=[s3deploy.Source.asset("./my-site-ui/dist")],
-            destination_bucket=site_bucket,
-            memory_limit=3008,               # up from default 128 MB
-            ephemeral_storage_size=Size.mebibytes(2048),  # /tmp space for unzip, also small by default
-        )
-
         certificate = acm.Certificate.from_certificate_arn(
             self, "SiteCert", "arn:aws:acm:us-east-1:919183601782:certificate/78166b8c-f865-4656-b784-10390270dc90"
-        )
-
-        # Replace with your hosted zone name
-        zone = route53.HostedZone.from_lookup(
-            self, "Zone", domain_name="getconnexus.org"
         )
 
         distribution = cloudfront.Distribution(
@@ -63,6 +51,20 @@ class MySiteStack(Stack):
                     response_page_path="/index.html", 
                 )
             ],
+        )
+
+        s3deploy.BucketDeployment(self, "DeployWebsite",
+            sources=[s3deploy.Source.asset("./my-site-ui/dist")],
+            destination_bucket=site_bucket,
+            distribution=distribution,
+            distribution_paths=["/*"],
+            memory_limit=3008,
+            ephemeral_storage_size=Size.mebibytes(2048),
+        )
+
+        # Replace with your hosted zone name
+        zone = route53.HostedZone.from_lookup(
+            self, "Zone", domain_name="getconnexus.org"
         )
 
         route53.ARecord(
