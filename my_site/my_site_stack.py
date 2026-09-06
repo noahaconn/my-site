@@ -32,11 +32,6 @@ class _PipLocalBundling:
     """Packages the Lambda's dependencies using a plain local `pip install`
     that targets Lambda's exact runtime platform (manylinux2014_x86_64,
     CPython 3.13), pulling pre-built wheels straight from PyPI.
-
-    This deliberately avoids Docker/virtualization entirely — no container is
-    started, nothing is compiled locally. If a future dependency doesn't
-    publish a manylinux wheel and this fails, CDK automatically falls back to
-    the Docker-based `bundling` command below.
     """
 
     def __init__(self, source_dir: str):
@@ -140,13 +135,6 @@ class MySiteStack(Stack):
             target=route53.RecordTarget.from_alias(targets.CloudFrontTarget(distribution)),
         )
 
-        # --- Chat API: Lambda + HTTP API ---
-        # Recreated in CDK (2026-08-19) to replace the previously console-managed
-        # API Gateway + Lambda, which had no IaC record at all. See CONNEXUS.md
-        # pain point #11. Source lives in ./lambda/portfolio_chat — vendored in from
-        # the separate `portfolio-chat` repo so this stack is fully self-contained
-        # and deployable from a fresh clone.
-
         openai_secret = secretsmanager.Secret.from_secret_name_v2(
             self, "OpenAiSecret", "portfolio_app/api_key"
         )
@@ -172,9 +160,11 @@ class MySiteStack(Stack):
             ),
             timeout=Duration.seconds(30),
             memory_size=256,
+            # Hard ceiling on simultaneous executions, independent of API Gateway
+            reserved_concurrent_executions=5,
         )
 
-        # Least-privilege: only allow reading this one secret, not all of Secrets Manager.
+        # Least-privilege: only allow reading this one secret, not all of Secrets Manager
         openai_secret.grant_read(chat_lambda)
 
         http_api = apigwv2.HttpApi(
@@ -192,6 +182,13 @@ class MySiteStack(Stack):
             integration=apigwv2_integrations.HttpLambdaIntegration(
                 "ChatIntegration", chat_lambda
             ),
+        )
+
+        # Rate limiting
+        cfn_default_stage = http_api.default_stage.node.default_child
+        cfn_default_stage.default_route_settings = apigwv2.CfnStage.RouteSettingsProperty(
+            throttling_burst_limit=10,
+            throttling_rate_limit=5,
         )
 
         CfnOutput(self, "ChatApiUrl", value=f"{http_api.api_endpoint}/chat")

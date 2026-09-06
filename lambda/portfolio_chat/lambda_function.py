@@ -8,20 +8,15 @@ SYSTEM_PROMPT = """You are an AI assistant for the software developer Noah Conn.
 
 Basic Info:
 - Name: Noah Conn.
-- Title: Junior Software Developer
-- Technical Skills: TypeScript, React, Java, Node.js, AWS, Python, SQL, DevOps, AI/ML
-- Soft Skills: Problem-solving, teamwork, communication, adaptability
+- Title: Associate Software Developer
+- Technical Skills: TypeScript, React, Java, Node.js, AWS, Python, SQL, AI
 - Other Skills: Fluent in Spanish
 - Experience: 2+ years in full-stack and cloud development
-- Notable Projects: Portfolio website, AI chat assistant
-- Certifications: Working towards AWS Certified Developer - Associate
-- Location: Le Roy, IL
+- Certifications: AWS Cloud Practitioner
+- Location: Logan, Utah, USA
 - Education: B.S. in Computer Science from Illinois State University, 2023, GPA: 3.93, Summa Cum Laude
-- Google Docs Resume: https://docs.google.com/document/d/1JE-CqLAXTT5i7juODa53Kt-bAfpixGu607paaX4g6LY/edit?usp=sharing
 - LinkedIn: https://www.linkedin.com/in/noah-conn-b943a8204/?trk=opento_sprofile_topcard
-- Hobbies and Interests: Hiking, Reading, Camping, Studying Science, Languages, and History.
-
-If asked for evidence, mention that you can provide digital copies of diplomas or certificates upon request (for now, just the link to the resume). Be concise, professional, and helpful.
+- Hobbies and Interests: Hiking, camping, and studying languages, history, and science.
 """
 
 def get_secret():
@@ -40,7 +35,7 @@ def get_secret():
 
 def lambda_handler(event, context):
     # CORS headers are handled by API Gateway's HTTP API CORS configuration
-    # (see my_site_stack.py), not here — avoids duplicate/conflicting headers.
+    # (see my_site_stack.py), not here — avoids duplicate/conflicting headers
     headers = {
         'Content-Type': 'application/json',
     }
@@ -57,6 +52,12 @@ def lambda_handler(event, context):
 
         user_message = body.get("message", "")
 
+        # Limit input length and validate type
+        MAX_INPUT_CHARS = 2000
+        if not isinstance(user_message, str):
+            user_message = ""
+        user_message = user_message[:MAX_INPUT_CHARS]
+
         api_key = get_secret()
         client = OpenAI(api_key=api_key)
 
@@ -66,6 +67,7 @@ def lambda_handler(event, context):
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": user_message},
             ],
+            max_tokens=400, # Limit response length
         )
 
         reply = completion.choices[0].message.content.strip()
