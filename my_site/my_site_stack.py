@@ -70,14 +70,7 @@ class MySiteStack(Stack):
         super().__init__(scope, construct_id, **kwargs)
 
         site_bucket = s3.Bucket(self, "SiteBucket",
-            website_index_document="index.html",
-            website_error_document="index.html",
-            public_read_access=True,
-            block_public_access=s3.BlockPublicAccess(
-                block_public_policy=False, 
-                ignore_public_acls=False, 
-                restrict_public_buckets=False, 
-                block_public_acls=False),
+            block_public_access=s3.BlockPublicAccess.BLOCK_ALL,
             removal_policy=RemovalPolicy.DESTROY,
             auto_delete_objects=True
         )
@@ -93,15 +86,20 @@ class MySiteStack(Stack):
             certificate=certificate,
             domain_names=["getconnexus.org", "www.getconnexus.org"],
             default_behavior=cloudfront.BehaviorOptions(
-                origin=origins.S3Origin(site_bucket),
+                origin=origins.S3BucketOrigin.with_origin_access_control(site_bucket),
                 viewer_protocol_policy=cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
             ),
             error_responses=[
                 cloudfront.ErrorResponse(
                     http_status=404,
                     response_http_status=200,
-                    response_page_path="/index.html", 
-                )
+                    response_page_path="/index.html",
+                ),
+                cloudfront.ErrorResponse(
+                    http_status=403,
+                    response_http_status=200,
+                    response_page_path="/index.html",
+                ),
             ],
         )
 
@@ -193,5 +191,6 @@ class MySiteStack(Stack):
 
         CfnOutput(self, "ChatApiUrl", value=f"{http_api.api_endpoint}/chat")
 
-        CfnOutput(self, "WebsiteURL", value=site_bucket.bucket_website_url)
+        CfnOutput(self, "SiteURL", value="https://getconnexus.org")
+        CfnOutput(self, "CloudFrontDomain", value=distribution.domain_name)
 
