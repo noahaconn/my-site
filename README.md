@@ -1,58 +1,49 @@
+# Connexus
 
-# Welcome to your CDK Python project!
+**[getconnexus.org](https://getconnexus.org)**
 
-This is a blank project for CDK development with Python.
+Connexus is Noah Conn's platform for building and shipping real, working software — not
+demos, not slides. Today that means three things you can actually use:
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+- **AI Chatbot** — ask it about Noah's work, backed by the OpenAI API.
+- **Book of Mormon Quiz** — a quiz/trivia experience.
+- **Greek NT Reader** — an immersive reading tool that progressively swaps English words for
+  Greek across the New Testament, one word at a time, to aid language acquisition.
 
-This project is set up like a standard Python project.  The initialization
-process also creates a virtualenv within this project, stored under the `.venv`
-directory.  To create the virtualenv it assumes that there is a `python3`
-(or `python` for Windows) executable in your path with access to the `venv`
-package. If for any reason the automatic creation of the virtualenv fails,
-you can create the virtualenv manually.
+It started as a personal portfolio site. It's becoming something broader — a place to build
+full-stack, cloud, and AI-integrated tools worth using on their own merits, with the
+infrastructure to grow into whatever that turns out to be: more tools, real user accounts,
+persistent state, maybe more than one contributor. Nothing about the architecture assumes
+"single owner, single purpose" is permanent.
 
-To manually create a virtualenv on MacOS and Linux:
+---
 
-```
-$ python -m venv .venv
-```
+## How it's built
 
-After the init process completes and the virtualenv is created, you can use the following
-step to activate your virtualenv.
+Everything — frontend, infrastructure, and the AI backend — deploys from a single AWS CDK
+stack, written in Python, in this one repo. A few choices worth knowing about going in:
 
-```
-$ source .venv/bin/activate
-```
+- **No public S3, ever.** The frontend bucket is fully private; CloudFront reaches it via
+  Origin Access Control, not a public bucket policy.
+- **Secrets never touch the repo or an env var.** The OpenAI key lives in Secrets Manager and
+  is fetched at request time, scoped to a single, least-privilege IAM grant.
+- **Layered cost/abuse controls** on the AI-backed endpoint: API Gateway throttling, Lambda
+  concurrency limits, and per-request input/output caps, stacked rather than relying on any
+  one of them.
 
-If you are a Windows platform, you would activate the virtualenv like this:
+Full technical detail — diagram, repo layout, deploy steps, API contract, security posture —
+lives in **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**.
 
-```
-% .venv\Scripts\activate.bat
-```
+---
 
-Once the virtualenv is activated, you can install the required dependencies.
+## Status
 
-```
-$ pip install -r requirements.txt
-```
+Actively developed. Rough edges are expected and are being worked through deliberately rather
+than papered over — see the architecture doc for what's solid today and what's still open.
 
-At this point you can now synthesize the CloudFormation template for this code.
+---
 
-```
-$ cdk synth
-```
+## License
 
-To add additional dependencies, for example other CDK libraries, just add
-them to your `setup.py` file and rerun the `pip install -r requirements.txt`
-command.
-
-## Useful commands
-
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
-
-Enjoy!
+Personal project — all rights reserved. Feel free to read the code for reference; please ask
+before reusing it wholesale.
