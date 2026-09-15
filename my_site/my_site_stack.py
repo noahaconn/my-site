@@ -104,7 +104,10 @@ class MySiteStack(Stack):
         )
 
         s3deploy.BucketDeployment(self, "DeployWebsite",
-            sources=[s3deploy.Source.asset("./my-site-ui/dist")],
+            sources=[s3deploy.Source.asset("./my-site-ui/dist", exclude=[
+                "greek-reader/**",
+                "scriptures/**",
+            ])],
             destination_bucket=site_bucket,
             distribution=distribution,
             distribution_paths=["/*"],
@@ -112,7 +115,20 @@ class MySiteStack(Stack):
             ephemeral_storage_size=Size.mebibytes(2048),
         )
 
-        # Replace with your hosted zone name
+        s3deploy.BucketDeployment(self, "DeployGreekReaderData",
+            sources=[s3deploy.Source.asset("./my-site-ui/public/greek-reader")],
+            destination_bucket=site_bucket,
+            destination_key_prefix="greek-reader",
+            memory_limit=3008,
+            ephemeral_storage_size=Size.mebibytes(2048),
+        )
+
+        s3deploy.BucketDeployment(self, "DeployScripturesData",
+            sources=[s3deploy.Source.asset("./my-site-ui/public/scriptures")],
+            destination_bucket=site_bucket,
+            destination_key_prefix="scriptures",
+        )
+
         zone = route53.HostedZone.from_lookup(
             self, "Zone", domain_name="getconnexus.org"
         )
@@ -146,9 +162,7 @@ class MySiteStack(Stack):
             code=_lambda.Code.from_asset(
                 "./lambda/portfolio_chat",
                 bundling=BundlingOptions(
-                    # Tried first, runs on your machine with no Docker/VM involved.
                     local=_PipLocalBundling(os.path.abspath(lambda_source_dir)),
-                    # Only used if local bundling above returns False.
                     image=_lambda.Runtime.PYTHON_3_13.bundling_image,
                     command=[
                         "bash", "-c",

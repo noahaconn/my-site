@@ -1,7 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import bomData from "../../scriptures/bom.json";
+
+const BOM_DATA_URL = "/scriptures/bom.json";
+
+type BomVerse = { reference: string; text: string };
+type BomHeading = { reference: string; text: string };
+type BomData = { verses?: BomVerse[]; headings?: BomHeading[] };
 
 type BioProps = {
   openSide: boolean;
@@ -48,26 +53,46 @@ export default function BoMQuiz({
   const [score, setScore] = useState<ScoreState>(EMPTY_SCORE);
 
   useEffect(() => {
-    const combined: QuizItem[] = [
-      ...(bomData.verses ?? []).map((v) => ({
-        type: "verse" as const,
-        reference: v.reference,
-        text: v.text,
-      })),
-      ...(bomData.headings ?? []).map((h) => ({
-        type: "heading" as const,
-        reference: h.reference,
-        text: h.text,
-      })),
-    ];
+    let cancelled = false;
 
-    setItems(combined);
+    fetch(BOM_DATA_URL)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to load Book of Mormon data: ${res.status}`);
+        }
+        return res.json() as Promise<BomData>;
+      })
+      .then((bomData) => {
+        if (cancelled) return;
 
-    if (combined.length > 0) {
-      setCurrent(
-        combined[Math.floor(Math.random() * combined.length)]
-      );
-    }
+        const combined: QuizItem[] = [
+          ...(bomData.verses ?? []).map((v) => ({
+            type: "verse" as const,
+            reference: v.reference,
+            text: v.text,
+          })),
+          ...(bomData.headings ?? []).map((h) => ({
+            type: "heading" as const,
+            reference: h.reference,
+            text: h.text,
+          })),
+        ];
+
+        setItems(combined);
+
+        if (combined.length > 0) {
+          setCurrent(
+            combined[Math.floor(Math.random() * combined.length)]
+          );
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   function normalize(text: string) {
