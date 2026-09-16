@@ -224,3 +224,37 @@ class TestStaticDataDeployments:
         # DeployWebsite (app code, no prefix) + DeployGreekReaderData + DeployScripturesData
         deployments = template.find_resources("Custom::CDKBucketDeployment")
         assert len(deployments) == 3
+
+    def test_app_code_deployment_does_not_prune(self, template):
+        deployments = template.find_resources("Custom::CDKBucketDeployment")
+        # DeployWebsite is the one with no DestinationBucketKeyPrefix.
+        app_code_deployments = [
+            props
+            for props in (r["Properties"] for r in deployments.values())
+            if "DestinationBucketKeyPrefix" not in props
+        ]
+        assert len(app_code_deployments) == 1
+        assert app_code_deployments[0].get("Prune") is False
+
+    def test_data_deployments_still_prune_within_their_own_prefix(self, template):
+        deployments = template.find_resources("Custom::CDKBucketDeployment")
+        prefixed_deployments = [
+            props
+            for props in (r["Properties"] for r in deployments.values())
+            if "DestinationBucketKeyPrefix" in props
+        ]
+        assert len(prefixed_deployments) == 2
+        for props in prefixed_deployments:
+            assert props.get("Prune") is not False
+
+    def test_greek_reader_and_scriptures_use_distinct_source_assets(self, template):
+        """An identical hash makes CDK treat two entirely different
+        directories as the *same* asset, which would deploy the wrong content to one
+        of the two prefixes. Their source object keys must always differ."""
+        deployments = template.find_resources("Custom::CDKBucketDeployment")
+        prefixed = {
+            props["DestinationBucketKeyPrefix"]: props.get("SourceObjectKeys")
+            for props in (r["Properties"] for r in deployments.values())
+            if "DestinationBucketKeyPrefix" in props
+        }
+        assert prefixed["greek-reader"] != prefixed["scriptures"]

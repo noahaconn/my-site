@@ -113,10 +113,14 @@ class MySiteStack(Stack):
             distribution_paths=["/*"],
             memory_limit=3008,
             ephemeral_storage_size=Size.mebibytes(2048),
+            prune=False,
         )
 
         s3deploy.BucketDeployment(self, "DeployGreekReaderData",
-            sources=[s3deploy.Source.asset("./my-site-ui/public/greek-reader")],
+            sources=[s3deploy.Source.asset(
+                "./my-site-ui/public/greek-reader",
+                asset_hash="restore-2026-09-12-greek-reader",
+            )],
             destination_bucket=site_bucket,
             destination_key_prefix="greek-reader",
             memory_limit=3008,
@@ -124,7 +128,10 @@ class MySiteStack(Stack):
         )
 
         s3deploy.BucketDeployment(self, "DeployScripturesData",
-            sources=[s3deploy.Source.asset("./my-site-ui/public/scriptures")],
+            sources=[s3deploy.Source.asset(
+                "./my-site-ui/public/scriptures",
+                asset_hash="restore-2026-09-12-scriptures",
+            )],
             destination_bucket=site_bucket,
             destination_key_prefix="scriptures",
         )
