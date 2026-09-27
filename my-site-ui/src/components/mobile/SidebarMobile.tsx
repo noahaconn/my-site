@@ -36,6 +36,9 @@ export default function SidebarMobile({ open, setOpen }: SidebarProps) {
             <Link to="/greek-reader" onClick={() => setOpen(false)} className="block rounded px-2 py-1">
               Greek Reader
             </Link>
+            <Link to="/prayer-deck" onClick={() => setOpen(false)} className="block rounded px-2 py-1">
+              Prayer Deck
+            </Link>
             <Link to="#" className="block rounded px-2 py-1">
               More Coming Soon...
             </Link>

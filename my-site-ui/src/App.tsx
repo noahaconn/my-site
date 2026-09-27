@@ -7,6 +7,7 @@ import BoMQuiz from "./components/pages/BOMQuiz.tsx";
 import GreekReader from "./components/pages/GreekReader.tsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CONNrWeb from "./components/web/CONNrWeb.tsx";
+import PrayerDeck from "./components/prayerDeck/PrayerDeck.tsx";
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/bio" element={<Bio openSide={sidebarOpen} openConnr={connrOpen}/>} />
             <Route path="/bom-quiz" element={<BoMQuiz openSide={sidebarOpen} openConnr={connrOpen}/>} />
             <Route path="/greek-reader" element={<GreekReader openSide={sidebarOpen} openConnr={connrOpen}/>} />
+            <Route path="/prayer-deck" element={<PrayerDeck openSide={sidebarOpen} openConnr={connrOpen} />}/>
           </Routes>
 
           <CONNrWeb open={connrOpen} setOpen={setConnrOpen}></CONNrWeb>
